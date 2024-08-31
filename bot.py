@@ -159,6 +159,9 @@ CHUTOKYU_CORE = {
 
 ORDINANCE_CITY = {
     '大阪市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/osakaballpbmaker.png?raw=true',
+    '神戸市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/kobepbmaker.png?raw=true',
+    '京都市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/kyotocitypbmaker.png?raw=true',
+    '千葉市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/chibacitypbmaker.png?raw=true',
     '福岡市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/fukuokacitypbmaker.png?raw=true',
     '広島市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/hiroshimacitypbmaker.png?raw=true',
     '名古屋市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/nagoyapbmaker.png?raw=true',
