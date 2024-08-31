@@ -73,6 +73,15 @@ NCAMERICA_COUNTRY = {
 
 }
 
+CARIBBEAN_COUNTRY = {
+    'アンティグア・バーブーダ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/antiguaballpbmaker.png?raw=true',
+    'キューバ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/cubaballpbmaker.png?raw=true',
+    'ジャマイカ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/jamaicaballpbmaker.png?raw=true',
+    'ドミニカ国': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/dominicaballpbmaker.png?raw=true',
+    'ドミニカ共和国': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/dominicanrepballpbmaker.png?raw=true',
+    'ハイチ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/haitiballpbmaker.png?raw=true',
+}
+
 SAMERICA_COUNTRY = {
     'アルゼンチン': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/argentinaballpbmaker.png?raw=true',
     'ブラジル': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/brazilballpbmaker.png?raw=true'
@@ -230,6 +239,7 @@ CATEGORY_FLAGS = {
     '西アジアの国々': WASIA_COUNTRY,
     '中央・南アジアの国々': CSASIA_COUNTRY,
     '北中米の国々': NCAMERICA_COUNTRY,
+    'カリブ海の国々': CARIBBEAN_COUNTRY,
     '南米の国々': SAMERICA_COUNTRY,
     '北・西アフリカの国々': NWAFRICA_COUNTRY,
     '中央・南アフリカの国々': CSAFRICA_COUNTRY,
