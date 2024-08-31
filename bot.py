@@ -142,7 +142,17 @@ ORDINANCE_CITY = {
     '名古屋市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/nagoyapbmaker.png?raw=true',
     '仙台市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/sendaipbmaker.png?raw=true',
     '札幌市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/sapporopbmaker.png?raw=true',
-    '横浜市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/yokohamapbmaker.png?raw=true'
+    '横浜市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/yokohamapbmaker.png?raw=true',
+    '熊本市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/kumamotocityballpbmaker.png?raw=true',
+    '岡山市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/okayamaballpbmaker.png?raw=true',
+    '静岡市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/shizuokaballpbmaker.png?raw=true',
+    '新潟市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/niigatacityballpbmaker.png?raw=true',
+    '北九州市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/kitakyushuballpbmaker.png?raw=true',
+    '川崎市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/kawasakiballpbmaker.png?raw=true',
+    'さいたま市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/saitamacityballpbmaker.png?raw=true',
+    '浜松市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/hamamatsuballpbmaker.png?raw=true',
+    '堺市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/sakaiballpbmaker.png?raw=true',
+    '相模原市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/sagamiharaballpbmaker.png?raw=true'
 }
 
 OTHERS = {
