@@ -115,8 +115,8 @@ KINTOKYU_PREF = {
 }
 
 TOHTOKAN_CORE = {
-    '宇都宮市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/utsunomiyaballpbmaker.png?raw=true'
-
+    '宇都宮市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/utsunomiyaballpbmaker.png?raw=true',
+    '水戸市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/mitoballpbmaker.png?raw=true'
 }
 
 CHUTOKIN_CORE = {
