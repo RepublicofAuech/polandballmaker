@@ -350,4 +350,5 @@ async def pb_maker(interaction: discord.Interaction,
         file = discord.File(output, filename='polandball.png')
         await interaction.response.send_message(file=file)
 
+load_dotenv()
 bot.run(os.getenv("TOKEN"))
