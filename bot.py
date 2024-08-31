@@ -10,7 +10,6 @@ from dotenv import load_dotenv
 intents = discord.Intents.all()
 bot = commands.Bot(command_prefix='/', intents=intents)
 
-
 @bot.event
 async def on_ready():
     await bot.tree.sync()
@@ -205,7 +204,7 @@ CATEGORY_FLAGS = {
     '南米の国々': SAMERICA_COUNTRY,
     '北・西アフリカの国々': NWAFRICA_COUNTRY,
     '中央・南アフリカの国々': CSAFRICA_COUNTRY,
-    'オセアニアの国々:': OCEANIA_COUNTRY,
+    'オセアニアの国々': OCEANIA_COUNTRY,
     '都道府県（東北から中部）': TOHTOCHU_PREF,
     '都道府県（近畿から九州）': KINTOKYU_PREF,
     '政令市': ORDINANCE_CITY,
@@ -254,9 +253,6 @@ EXPRESSION_CHOICES = [
 
 POSITION_CHOICES = [app_commands.Choice(
     name=pos, value=pos) for pos in POSITION_COMMANDS.keys()]
-
-# Function to dynamically provide country/prefecture/city options based on category
-
 
 async def get_country_choices(interaction: discord.Interaction, current: str):
     category = interaction.namespace.category
