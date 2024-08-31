@@ -29,9 +29,8 @@ WSEUROPE_COUNTRY = {
     'トルコ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/turkeyballpbmaker.png?raw=true'
 }
 
-MIDEASCAUCASUS_COUNTRY = {
+WASIA_COUNTRY = {
     'トルコ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/turkeyballpbmaker.png?raw=true',
-    'エジプト': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/egyptpbmaker.png?raw=true',
     'サウジアラビア': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/saudiarabiaballpbmaker.png?raw=true',
     'イスラエル': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/israelballpbmaker.png?raw=true'
 }
@@ -58,8 +57,13 @@ ESEASIA_COUNTRY = {
 
 CSASIA_COUNTRY = {
     'インド': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/indiaballpbmaker.png?raw=true',
-    'ネパール': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/nepalballpbmaker.png?raw=true'
-
+    'パキスタン': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/pakistanballpbmaker.png?raw=true',
+    'ネパール': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/nepalballpbmaker.png?raw=true',
+    'アフガニスタン': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/afghanistanballpbmaker.png?raw=true',
+    'アフガニスタン(旧)': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/afghanistanballpbmaker2.png?raw=true',
+    'バングラデシュ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/bangladeshballpbmaker.png?raw=true',
+    'ブータン': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/bhutanballpbmaker.png?raw=true',
+    'スリランカ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/srilankaballpbmaker.png?raw=true'
 }
 
 NCAMERICA_COUNTRY = {
@@ -219,7 +223,7 @@ CATEGORY_FLAGS = {
     '西・南ヨーロッパの国々': WSEUROPE_COUNTRY,
     '東・北ヨーロッパの国々': ENEUROPE_COUNTRY,
     '東・東南アジアの国々': ESEASIA_COUNTRY,
-    '中東・コーカサスの国々': MIDEASCAUCASUS_COUNTRY,
+    '西アジアの国々': WASIA_COUNTRY,
     '中央・南アジアの国々': CSASIA_COUNTRY,
     '北中米の国々': NCAMERICA_COUNTRY,
     '南米の国々': SAMERICA_COUNTRY,
