@@ -5,22 +5,12 @@ import aiohttp
 import io
 import os
 from PIL import Image
-from flask import Flask
-import threading
+from dotenv import load_dotenv
+import keep_alive
 
 intents = discord.Intents.all()
 bot = commands.Bot(command_prefix='/', intents=intents)
 
-# Flask app to keep the bot online
-app = Flask(__name__)
-
-@app.route('/')
-def home():
-    return "The bot is running!"
-
-# Function to run the Flask server in a separate thread
-def run_flask():
-    app.run(host='0.0.0.0', port=8080)
 
 @bot.event
 async def on_ready():
@@ -58,7 +48,7 @@ ESEASIA_COUNTRY = {
 }
 
 CSASIA_COUNTRY = {
-     'インド': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/indiaballpbmaker.png?raw=true'
+    'インド': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/indiaballpbmaker.png?raw=true'
 
 }
 
@@ -111,7 +101,7 @@ TOHTOCHU_PREF = {
     '長野県': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/naganopbmaker.png?raw=true',
     '岐阜県': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/gifupbmaker.png?raw=true',
     '福島県': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/fukushimapbmaker.png?raw=true'
- }
+}
 
 KINTOKYU_PREF = {
     '広島県': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/hiroshimapbmaker.png?raw=true',
@@ -156,6 +146,8 @@ ORDINANCE_CITY = {
 
 OTHERS = {
     'EU': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/euballpbmaker.png?raw=true',
+    'An Untitled Editor': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/aueballpbmaker.png?raw=true',
+    '鳥取県信者ボール': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/believertottoripbmaker.png?raw=true',
 }
 
 NONE = {
@@ -171,7 +163,7 @@ EXPRESSION_IMAGES = {
     '真面目': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/eyes/kindaserious.png?raw=true',
     '怒り': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/eyes/angryeyes.png?raw=true',
     'なし': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/invisibleimage.png?raw=true'
- }
+}
 
 POSITION_COMMANDS = {
     '真ん中': '目の位置は真ん中に設定されました。',
@@ -240,15 +232,20 @@ EXPRESSION_CHOICES = [
     app_commands.Choice(name='なし', value='なし')
 ]
 
-POSITION_CHOICES = [app_commands.Choice(name=pos, value=pos) for pos in POSITION_COMMANDS.keys()]
+POSITION_CHOICES = [app_commands.Choice(
+    name=pos, value=pos) for pos in POSITION_COMMANDS.keys()]
 
 # Function to dynamically provide country/prefecture/city options based on category
+
+
 async def get_country_choices(interaction: discord.Interaction, current: str):
     category = interaction.namespace.category
     flags = CATEGORY_FLAGS.get(category, {})
     return [app_commands.Choice(name=name, value=name) for name in flags.keys() if current.lower() in name.lower()]
 
 # Function to download an image from a URL
+
+
 async def fetch_image(url):
     async with aiohttp.ClientSession() as session:
         async with session.get(url) as response:
@@ -261,6 +258,8 @@ async def fetch_image(url):
                 return None
 
 # Function to merge the flag and expression images with more offset for each predefined position
+
+
 def merge_images(flag_img, expression_img, position):
     if expression_img is None:
         print("No expression image provided.")
@@ -274,7 +273,8 @@ def merge_images(flag_img, expression_img, position):
     # Resize the expression image to 100% of the flag's size
     new_width = int(flag_img.width * 1)
     new_height = int(flag_img.height * 1)
-    expression_img = expression_img.resize((new_width, new_height), Image.LANCZOS)
+    expression_img = expression_img.resize(
+        (new_width, new_height), Image.LANCZOS)
 
     # Define offset values for more exaggerated positions
     offset_x, offset_y = 120, 120  # Adjust these values for more or less offset
@@ -293,7 +293,8 @@ def merge_images(flag_img, expression_img, position):
     }
 
     # Get the coordinates for the given position
-    x, y = positions.get(position, ((flag_img.width - expression_img.width) // 2, (flag_img.height - expression_img.height) // 2))
+    x, y = positions.get(position, ((flag_img.width - expression_img.width) //
+                         2, (flag_img.height - expression_img.height) // 2))
 
     # Merge the expression onto the flag image
     combined_img = flag_img.copy()
@@ -302,6 +303,8 @@ def merge_images(flag_img, expression_img, position):
     return combined_img
 
 # Command to create the Polandball image
+
+
 @bot.tree.command(name='pb_maker', description='指定されたポーランドボールを作成します')
 @app_commands.describe(
     category='柄のカテゴリーを選んでください',
@@ -311,19 +314,19 @@ def merge_images(flag_img, expression_img, position):
 )
 @app_commands.choices(category=CATEGORY_CHOICES, expression=EXPRESSION_CHOICES, position=POSITION_CHOICES)
 @app_commands.autocomplete(country=get_country_choices)
-async def pb_maker(interaction: discord.Interaction, 
-                   category: app_commands.Choice[str], 
-                   country: str, 
-                   expression: app_commands.Choice[str], 
+async def pb_maker(interaction: discord.Interaction,
+                   category: app_commands.Choice[str],
+                   country: str,
+                   expression: app_commands.Choice[str],
                    position: app_commands.Choice[str]):
 
     flag_url = CATEGORY_FLAGS[category.value].get(country, None)
     expression_url = EXPRESSION_IMAGES.get(expression.value, None)
-    
+
     if flag_url is None:
         await interaction.response.send_message("指定された国や地域の画像が見つかりませんでした。")
         return
-    
+
     flag_img = await fetch_image(flag_url)
     expression_img = await fetch_image(expression_url)
 
@@ -332,7 +335,7 @@ async def pb_maker(interaction: discord.Interaction,
         return
 
     combined_img = merge_images(flag_img, expression_img, position.value)
-    
+
     # Save and send the image (this part will need to be implemented based on how you want to handle it)
     with io.BytesIO() as output:
         combined_img.save(output, format='PNG')
@@ -340,8 +343,8 @@ async def pb_maker(interaction: discord.Interaction,
         file = discord.File(output, filename='polandball.png')
         await interaction.response.send_message(file=file)
 
-thread = threading.Thread(target=run_flask)
-thread.start()
-
 # Run the bot
-bot.run(os.getenv("TOKEN"))
+if __name__ == "__main__":
+    keep_alive.keep_alive()
+    load_dotenv()
+    bot.run(os.getenv("TOKEN"))
