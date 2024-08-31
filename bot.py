@@ -56,6 +56,11 @@ ESEASIA_COUNTRY = {
 }
 
 CSASIA_COUNTRY = {
+    'ウズベキスタン': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/uzbekistanballpbmaker.png?raw=true',
+    'キルギス': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/kyrgyzstanballpbmaker.png?raw=true',
+    'トルクメニスタン': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/turkmenistanballpbmaker.png?raw=true',
+    'タジキスタン': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/tajikistanballpbmaker.png?raw=true',
+    'カザフスタン': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/kazakhstanballpbmaker.png?raw=true',
     'インド': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/indiaballpbmaker.png?raw=true',
     'パキスタン': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/pakistanballpbmaker.png?raw=true',
     'ネパール': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/nepalballpbmaker.png?raw=true',
@@ -69,8 +74,14 @@ CSASIA_COUNTRY = {
 NCAMERICA_COUNTRY = {
     'アメリカ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/usaballpbmaker.png?raw=true',
     'メキシコ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/mexicoballpbmaker.png?raw=true',
-    'カナダ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/canadaballpbmaker.png?raw=true'
-
+    'カナダ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/canadaballpbmaker.png?raw=true',
+    'グアテマラ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/guatemalaballpbmaker.png?raw=true',
+    'ニカラグア': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/nicaraguaballpbmaker.png?raw=true',
+    'ベリーズ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/belizeballpbmaker.png?raw=true',
+    'エルサルバドル': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/elsalvadorballpbmaker.png?raw=true',
+    'ホンジュラス': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/hondurasballpbmaker.png?raw=true',
+    'コスタリカ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/costaricaballpbmaker.png?raw=true',
+    'パナマ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/panamaballpbmaker.png?raw=true'
 }
 
 CARIBBEAN_COUNTRY = {
@@ -114,6 +125,7 @@ OCEANIA_COUNTRY = {
     'ミクロネシア': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/micronesiaballpbmaker.png?raw=true',
     'バヌアツ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/vanuatuballpbmaker.png?raw=true',
     'パラオ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/palauballpbmaker.png?raw=true',
+    'トンガ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/tongaballpbmaker.png?raw=true',
     'パプアニューギニア': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/papuaballpbmaker.png?raw=true'
 }
 
