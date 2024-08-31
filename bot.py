@@ -320,23 +320,31 @@ async def pb_maker(interaction: discord.Interaction,
                    expression: app_commands.Choice[str],
                    position: app_commands.Choice[str]):
 
-    flag_url = CATEGORY_FLAGS[category.value].get(country, None)
+    # Fetch the flag URL based on category and country
+    flag_url = CATEGORY_FLAGS[category.value].get(country)
+    if not flag_url:
+        await interaction.response.send_message("指定された国や地域の旗画像が見つかりませんでした", ephemeral=True)
+        return
+
+    # Fetch the expression image URL or set to None if expression is 'なし'
     expression_url = EXPRESSION_IMAGES.get(expression.value, None)
-
-    if flag_url is None:
-        await interaction.response.send_message("指定された国や地域の画像が見つかりませんでした。")
-        return
-
+    
+    # Fetch the images
     flag_img = await fetch_image(flag_url)
-    expression_img = await fetch_image(expression_url)
-
-    if flag_img is None:
-        await interaction.response.send_message("旗の画像を取得できませんでした。")
+    expression_img = await fetch_image(expression_url) if expression_url else None
+    
+    if not flag_img:
+        await interaction.response.send_message("旗の画像を取得できませんでした。再試行してください", ephemeral=True)
         return
 
-    combined_img = merge_images(flag_img, expression_img, position.value)
+    # Merge images based on position
+    try:
+        combined_img = merge_images(flag_img, expression_img, position.value)
+    except Exception as e:
+        await interaction.response.send_message(f"画像の合成中にエラーが発生しました: {e}", ephemeral=True)
+        return
 
-    # Save and send the image (this part will need to be implemented based on how you want to handle it)
+    # Save and send the image
     with io.BytesIO() as output:
         combined_img.save(output, format='PNG')
         output.seek(0)
