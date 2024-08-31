@@ -40,10 +40,20 @@ ESEASIA_COUNTRY = {
     '日本': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/japanballpbmaker.png?raw=true',
     '中国': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/chinaballpbmaker.png?raw=true',
     '台湾': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/taiwanballpbmaker.png?raw=true',
-
     'インドネシア': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/indonesiaballpbmaker.png?raw=true',
     'シンガポール': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/trianglesgballpbmaker.png?raw=true',
     '韓国': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/southkoreaballpbmaker.png?raw=true',
+    '香港': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/hongkongballpbmaker.png?raw=true',
+    'マカオ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/macauballpbmaker.png?raw=true',
+    'モンゴル': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/mongoliaballpbmaker.png?raw=true',
+    'タイ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/thailandballpbmaker.png?raw=true',
+    'ベトナム': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/vietnamballpbmaker.png?raw=true',
+    'マレーシア': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/malaysiaballpbmaker.png?raw=true',
+    'フィリピン': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/philippinesballpbmaker.png?raw=true',
+    'カンボジア': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/cambodiaballpbmaker.png?raw=true',
+    'ミャンマー': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/myanmarballpbmaker.png?raw=true',
+    'ラオス': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/laosballpbmaker.png?raw=true',
+    '北朝鮮': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/northkoreaballpbmaker.png?raw=true',
 }
 
 CSASIA_COUNTRY = {
