@@ -244,7 +244,7 @@ CATEGORY_FLAGS = {
 CATEGORY_CHOICES = [
     app_commands.Choice(name='西・南ヨーロッパの国々', value='西・南ヨーロッパの国々'),
     app_commands.Choice(name='東・北ヨーロッパの国々', value='東・北ヨーロッパの国々'),
-    app_commands.Choice(name='中東・コーカサスの国々', value='中東・コーカサスの国々'),
+    app_commands.Choice(name='西アジアの国々', value='西アジアの国々'),
     app_commands.Choice(name='東・東南アジアの国々', value='東・東南アジアの国々'),
     app_commands.Choice(name='中央・南アジアの国々', value='中央・南アジアの国々'),
     app_commands.Choice(name='北中米の国々', value='北中米の国々'),
