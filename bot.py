@@ -81,7 +81,17 @@ CSAFRICA_COUNTRY = {
 
 OCEANIA_COUNTRY = {
     'ニュージーランド': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/newzealandballpbmaker.png?raw=true',
-    'オーストラリア': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/australiaballpbmaker.png?raw=true'
+    'オーストラリア': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/australiaballpbmaker.png?raw=true',
+    'ツバル': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/tuvaluballpbmaker.png?raw=true',
+    'キリバス': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/kiribatiballpbmaker.png?raw=true',
+    'サモア': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/samoaballpbmaker.png?raw=true',
+    'マーシャル諸島': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/marshallballpbmaker.png?raw=true',
+    'ソロモン諸島': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/solomonballpbmaker.png?raw=true',
+    'ナウル': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/nauruballpbmaker.png?raw=true',
+    'ミクロネシア': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/micronesiaballpbmaker.png?raw=true',
+    'バヌアツ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/vanuatuballpbmaker.png?raw=true',
+    'パラオ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/palauballpbmaker.png?raw=true',
+    'パプアニューギニア': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/papuaballpbmaker.png?raw=true'
 }
 
 
