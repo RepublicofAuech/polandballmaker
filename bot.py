@@ -6,7 +6,6 @@ import io
 import os
 from PIL import Image
 from dotenv import load_dotenv
-import keep_alive
 
 intents = discord.Intents.all()
 bot = commands.Bot(command_prefix='/', intents=intents)
@@ -351,8 +350,4 @@ async def pb_maker(interaction: discord.Interaction,
         file = discord.File(output, filename='polandball.png')
         await interaction.response.send_message(file=file)
 
-# Run the bot
-if __name__ == "__main__":
-    keep_alive.keep_alive()
-    load_dotenv()
-    bot.run(os.getenv("TOKEN"))
+bot.run(os.getenv("TOKEN"))
