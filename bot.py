@@ -319,6 +319,8 @@ async def pb_maker(interaction: discord.Interaction,
                    expression: app_commands.Choice[str],
                    position: app_commands.Choice[str]):
 
+    await interaction.response.defer()
+
     # Fetch the flag URL based on category and country
     flag_url = CATEGORY_FLAGS[category.value].get(country)
     if not flag_url:
