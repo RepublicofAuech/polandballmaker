@@ -199,6 +199,7 @@ EXPRESSION_IMAGES = {
     '怒り': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/eyes/angryeyes.png?raw=true',
     'びっくり': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/eyes/scaredeyes.png?raw=true',
     'ぐっすり': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/eyes/closedeyes.png?raw=true',
+    'かわいい': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/eyes/cuteeyes.png?raw=true',
     'なし': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/invisibleimage.png?raw=true'
 }
 
@@ -268,6 +269,7 @@ EXPRESSION_CHOICES = [
     app_commands.Choice(name='怒り', value='怒り'),
     app_commands.Choice(name='びっくり', value='びっくり'),
     app_commands.Choice(name='ぐっすり', value='ぐっすり'),
+    app_commands.Choice(name='かわいい', value='かわいい'),
     app_commands.Choice(name='なし', value='なし')
 ]
 
