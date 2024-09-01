@@ -164,13 +164,65 @@ NWAFRICA_COUNTRY = {
     'リビア': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/libyapbmaker.png?raw=true',
     'モロッコ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/moroccopbmaker.png?raw=true',
     'チュニジア': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/tunisiapbmaker.png?raw=true',
-    'アルジェリア': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/algeriapbmaker.png?raw=true'
-
+    'アルジェリア': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/algeriapbmaker.png?raw=true',
+    'スーダン': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/sudanballpbmaker.png?raw=true',
+    '西サハラ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/westernsaharaballpbmaker.png?raw=true',
+    'モーリタニア': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/mauritaniaballpbmaker.png?raw=true',
+    'マリ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/maliballpbmaker.png?raw=true',
+    'ニジェール': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/nigerballpbmaker.png?raw=true',
+    'ナイジェリア': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/nigeriaballpbmaker.png?raw=true',
+    'ブルキナファソ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/burkinafasoballpbmaker.png?raw=true',
+    'ベナン': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/beninballpbmaker.png?raw=true',
+    'トーゴ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/togoballpbmaker.png?raw=true',
+    'ガーナ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/ghanaballpbmaker.png?raw=true',
+    'コートジボワール': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/ivorycoastballpbmaker.png?raw=true',
+    'リベリア': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/liberiaballpbmaker.png?raw=true',
+    'シエラレオネ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/sierraleoneballpbmaker.png?raw=true',
+    'ギニア': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/guineaballpbmaker.png?raw=true',
+    'ギニアビサウ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/guineabissauballpbmaker.png?raw=true',
+    'セネガル': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/senegalballpbmaker.png?raw=true',
+    'ガンビア': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/thegambiaballpbmaker.png?raw=true',
+    'カーボベルデ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/capeverdeballpbmaker.png?raw=true'
 }
 
 CSAFRICA_COUNTRY = {
+    'アンゴラ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/angolaballpbmaker.png?raw=true',
+    'カメルーン': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/cameroonballpbmaker.png?raw=true',
+    '中央アフリカ共和国': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/carballpbmaker.png?raw=true',
+    'チャド': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/chadballpbmaker.png?raw=true',
+    'コンゴ民主共和国': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/drcballpbmaker.png?raw=true',
+    'コンゴ共和国': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/congoballpbmaker.png?raw=true',
+    '赤道ギニア': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/equatorialguineaballpbmaker.png?raw=true',
+    'ガボン': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/gabonballpbmaker.png?raw=true',
+    'サントメ・プリンシペ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/saotomeballpbmaker.png?raw=true',
     '南アフリカ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/southafricaballpbmaker.png?raw=true',
+    'レソト': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/lesothoballpbmaker.png?raw=true',
+    'エスワティニ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/eswatiniballpbmaker.png?raw=true',
+    'ボツワナ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/botswanaballpbmaker.png?raw=true',
+    'ナミビア': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/southafricaballpbmaker.png?raw=true'
+}
 
+EAFRICA_COUNTRY = {
+    'エリトリア': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/eritreaballpbmaker.png?raw=true',
+    'ジブチ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/djiboutiballpbmaker.png?raw=true',
+    'エチオピア': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/ethiopiaballpbmaker.png?raw=true',
+    'ソマリア': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/somaliaballpbmaker.png?raw=true',
+    'ソマリランド': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/somalilandballpbmaker.png?raw=true',
+    'エチオピア': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/ethiopiaballpbmaker.png?raw=true',
+    '南スーダン': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/southsudanballpbmaker.png?raw=true',
+    'ケニア': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/kenyaballpbmaker.png?raw=true',
+    'ウガンダ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/ugandaballpbmaker.png?raw=true',
+    'ルワンダ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/rwandaballpbmaker.png?raw=true',
+    'ブルンジ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/burundiballpbmaker.png?raw=true',
+    'タンザニア': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/tanzaniaballpbmaker.png?raw=true',
+    'マラウイ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/malawiballpbmaker.png?raw=true',
+    'モザンビーク': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/mozambiqueballpbmaker.png?raw=true',
+    'ザンビア': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/zambiaballpbmaker.png?raw=true',
+    'ジンバブエ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/zimbabweballpbmaker.png?raw=true',
+    'マダガスカル': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/madagascarballpbmaker.png?raw=true',
+    'モーリシャス': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/mauritiusballpbmaker.png?raw=true',
+    'セーシェル': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/seychellesballpbmaker.png?raw=true',
+    'コモロ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/comorosballpbmaker.png?raw=true'
 }
 
 OCEANIA_COUNTRY = {
@@ -399,6 +451,7 @@ CATEGORY_FLAGS = {
     '南米の国々': SAMERICA_COUNTRY,
     '北・西アフリカの国々': NWAFRICA_COUNTRY,
     '中央・南アフリカの国々': CSAFRICA_COUNTRY,
+    '東アフリカの国々': EAFRICA_COUNTRY,
     'オセアニアの国々': OCEANIA_COUNTRY,
     '都道府県（東北から中部）': TOHTOCHU_PREF,
     '都道府県（近畿から九州）': KINTOKYU_PREF,
