@@ -344,7 +344,7 @@ CHUTOKIN_CORE = {
     '明石市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/akashiballpbmaker.png?raw=true',
     '大津市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/otsuballpbmaker.png?raw=true',
     '奈良市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/naracityballpbmaker.png?raw=true',
-    '和歌山市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/wakayamacityballpbmaker.png?raw=true',
+    '和歌山市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/wakaymacitypbmaker.png?raw=true',
     '甲府市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/kofuballpbmaker.png?raw=true',
     '松本市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/matsumotoballpbmaker.png?raw=true'
 }
