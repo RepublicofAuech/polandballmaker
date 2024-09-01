@@ -393,11 +393,22 @@ ORDINANCE_CITY = {
 }
 
 TERRITORIES = {
-    'グリーンランド': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/greenlandballpbmaker.png?raw=true'
+    'グリーンランド': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/greenlandballpbmaker.png?raw=true',
+    '東トルキスタン': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/eastturkestanballpbmaker.png?raw=true',
+    'チベット': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/tibetballpbmaker.png?raw=true',
+    '内モンゴル': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/innermongoliaballpbmaker.png?raw=true',
+    'シーランド': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/sealandballpbmaker.png?raw=true',
+}
+
+ORGANIZATIONS = {
+    'ヨーロッパ連合 (EU)': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/euballpbmaker.png?raw=true',
+    '国際連合 (UN)': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/unballpbmaker.png?raw=true',
+    'アフリカ連合 (AU)': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/auballpbmaker.png?raw=true',
+    '国際連盟 (LoN)': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/lonballpbmaker.png?raw=true',
+    '北大西洋条約機構 (NATO)': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/natoballpbmaker.png?raw=true',
 }
 
 OTHERS = {
-    'EU': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/euballpbmaker.png?raw=true',
     'An Untitled Editor': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/aueballpbmaker.png?raw=true',
     '鳥取県信者ボール': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/believertottoripbmaker.png?raw=true',
     'きんら': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/kinrapbmaker.png?raw=true',
@@ -459,7 +470,8 @@ CATEGORY_FLAGS = {
     '中核市（東北から関東）': TOHTOKAN_CORE,
     '中核市（中部から近畿）': CHUTOKIN_CORE,
     '中核市（中国から九州）': CHUTOKYU_CORE,
-    '海外領土・自治領': TERRITORIES,
+    '海外領土・自治領、未承認国家': TERRITORIES,
+    '組織': ORGANIZATIONS,
     'その他': OTHERS,
     'なし': NONE
 }
@@ -483,7 +495,8 @@ CATEGORY_CHOICES = [
     app_commands.Choice(name='中核市（東北から関東）', value='中核市（東北から関東）'),
     app_commands.Choice(name='中核市（中部から近畿）', value='中核市（中部から近畿）'),
     app_commands.Choice(name='中核市（中国から九州）', value='中核市（中国から九州）'),
-    app_commands.Choice(name='海外領土・自治領', value='海外領土・自治領'),
+    app_commands.Choice(name='海外領土・自治領、未承認国家', value='海外領土・自治領、未承認国家'),
+    app_commands.Choice(name='組織', value='組織'),
     app_commands.Choice(name='その他', value='その他'),
     app_commands.Choice(name='なし', value='なし')
 ]
