@@ -81,7 +81,7 @@ WASIA_COUNTRY = {
     'アゼルバイジャン': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/azerbaijanballpbmaker.png?raw=true',
     'ジョージア': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/georgiaballpbmaker.png?raw=true',
     'キプロス': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/cyprusballpbmaker.png?raw=true',
-    'アラブ首長国連邦': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/uaeballpbmaker.png?raw=true',
+    'アラブ首長国連邦': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/uaeballpbmaker.png?raw=true'
 }
 
 ESEASIA_COUNTRY = {
@@ -101,7 +101,7 @@ ESEASIA_COUNTRY = {
     'カンボジア': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/cambodiaballpbmaker.png?raw=true',
     'ミャンマー': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/myanmarballpbmaker.png?raw=true',
     'ラオス': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/laosballpbmaker.png?raw=true',
-    '北朝鮮': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/northkoreaballpbmaker.png?raw=true',
+    '北朝鮮': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/northkoreaballpbmaker.png?raw=true'
 }
 
 CSASIA_COUNTRY = {
