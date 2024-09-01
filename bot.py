@@ -64,8 +64,23 @@ WSEUROPE_COUNTRY = {
 
 WASIA_COUNTRY = {
     'トルコ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/turkeyballpbmaker.png?raw=true',
+    'イスラエル': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/israelballpbmaker.png?raw=true',
     'サウジアラビア': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/saudiarabiaballpbmaker.png?raw=true',
-    'イスラエル': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/israelballpbmaker.png?raw=true'
+    'レバノン': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/lebanonballpbmaker.png?raw=true',
+    'シリア': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/syriaballpbmaker.png?raw=true',
+    'オマーン': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/omanballpbmaker.png?raw=true',
+    'パレスチナ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/palestineballpbmaker.png?raw=true',
+    'イスラエル': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/israelballpbmaker.png?raw=true',
+    'バーレーン': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/bahrainballpbmaker.png?raw=true',
+    'カタール': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/qatarballpbmaker.png?raw=true',
+    'クウェート': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/kuwaitballpbmaker.png?raw=true',
+    'イラク': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/iraqballpbmaker.png?raw=true',
+    'イラン': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/iranballpbmaker.png?raw=true',
+    'イエメン': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/yemenballpbmaker.png?raw=true',
+    'アルメニア': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/armeniaballpbmaker.png?raw=true',
+    'アゼルバイジャン': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/azerbaijanballpbmaker.png?raw=true',
+    'ジョージア': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/georgiaballpbmaker.png?raw=true',
+    'キプロス': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/cyprusballpbmaker.png?raw=true',
 }
 
 ESEASIA_COUNTRY = {
