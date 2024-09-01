@@ -81,6 +81,7 @@ WASIA_COUNTRY = {
     'アゼルバイジャン': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/azerbaijanballpbmaker.png?raw=true',
     'ジョージア': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/georgiaballpbmaker.png?raw=true',
     'キプロス': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/cyprusballpbmaker.png?raw=true',
+    'アラブ首長国連邦': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/uaeballpbmaker.png?raw=true',
 }
 
 ESEASIA_COUNTRY = {
