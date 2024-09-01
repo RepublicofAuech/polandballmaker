@@ -180,6 +180,12 @@ OCEANIA_COUNTRY = {
 
 TOHTOCHU_PREF = {
     '愛知県': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/aichiballpbmaker.png?raw=true',
+    '青森県': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/aomoriballpbmaker.png?raw=true',
+    '岩手県': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/iwateballpbmaker.png?raw=true',
+    '秋田県': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/akitaballpbmaker.png?raw=true',
+    '山形県': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/tochigiballpbmaker.png?raw=true',
+    '栃木県': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/gunmaballpbmaker.png?raw=true',
+    '群馬県': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/aichiballpbmaker.png?raw=true',
     '千葉県': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/chibapbmaker.png?raw=true',
     '北海道': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/hokkaidopbmaker.png?raw=true',
     '茨城県': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/ibarakipbmaker.png?raw=true',
@@ -192,6 +198,10 @@ TOHTOCHU_PREF = {
     '静岡県': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/shizuokapbmaker.png?raw=true',
     '長野県': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/naganopbmaker.png?raw=true',
     '岐阜県': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/gifupbmaker.png?raw=true',
+    '富山県': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/toyamaballpbmaker.png?raw=true',
+    '石川県': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/ishikawaballpbmaker.png?raw=true',
+    '福井県': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/fukuiballpbmaker.png?raw=true',
+    '山梨県': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/yamanashiballpbmaker.png?raw=true',
     '福島県': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/fukushimapbmaker.png?raw=true'
 }
 
@@ -204,6 +214,22 @@ KINTOKYU_PREF = {
     '熊本県': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/kumamotopbmaker.png?raw=true',
     '三重県': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/miepbmaker.png?raw=true',
     '愛媛県': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/ehimepbmaker.png?raw=true',
+    '滋賀県': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/shigaballpbmaker.png?raw=true',
+    '奈良県': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/naraballpbmaker.png?raw=true',
+    '和歌山県': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/wakayamaballpbmaker.png?raw=true',
+    '鳥取県': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/tottoriballpbmaker.png?raw=true',
+    '島根県': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/shimaneballpbmaker.png?raw=true',
+    '山口県': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/yamaguchiballpbmaker.png?raw=true',
+    '徳島県': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/tokushimaballpbmaker.png?raw=true',
+    '香川県': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/kagawaballpbmaker.png?raw=true',
+    '高知県': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/kochiballpbmaker.png?raw=true',
+    '佐賀県': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/sagaballpbmaker.png?raw=true',
+    '長崎県': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/nagasakiballpbmaker.png?raw=true',
+    '大分県': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/oitaballpbmaker.png?raw=true',
+    '宮崎県': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/miyazakiballpbmaker.png?raw=true',
+    '鹿児島県': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/kagoshimaprefballpbmaker.png?raw=true',
+    '鹿児島県(シンボル)': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/kagoshimaprefballpbmaker2.png?raw=true',
+    '沖縄県': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/okinawaballpbmaker.png?raw=true',
     '岡山県': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/okayamapbmaker.png?raw=true'
 }
 
