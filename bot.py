@@ -19,13 +19,46 @@ async def on_ready():
 
 ENEUROPE_COUNTRY = {
     'ポーランド': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/polandballpbmaker1.png?raw=true',
-    'ロシア': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/russiaballpbmaker.png?raw=true'
+    'チェコ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/czechiaballpbmaker.png?raw=true',
+    'スロバキア': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/slovakiaballpbmaker.png?raw=true',
+    'スロベニア': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/sloveniaballpbmaker.png?raw=true',
+    'ハンガリー': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/hungaryballpbmaker.png?raw=true',
+    'セルビア': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/serbiaballpbmaker.png?raw=true',
+    'クロアチア': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/croatiaballpbmaker.png?raw=true',
+    'ボスニア・ヘルツェゴビナ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/bosniaballpbmaker.png?raw=true',
+    'モンテネグロ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/montenegroballpbmaker.png?raw=true',
+    'アルバニア': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/albaniaballpbmaker.png?raw=true',
+    '北マケドニア': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/northmacedoniaballpbmaker.png?raw=true',
+    'ブルガリア': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/bulgariaballpbmaker.png?raw=true',
+    'ルーマニア': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/romaniaballpbmaker.png?raw=true',
+    'ベラルーシ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/belarusballpbmaker.png?raw=true',
+    'モルドバ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/moldovaballpbmaker.png?raw=true',
+    'ウクライナ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/ukraineballpbmaker.png?raw=true',
+    'エストニア': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/estoniaballpbmaker.png?raw=true',
+    'ラトビア': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/latviaballpbmaker.png?raw=true',
+    'リトアニア': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/lithuaniaballpbmaker.png?raw=true',
+    'フィンランド': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/finlandballpbmaker.png?raw=true',
+    'スウェーデン': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/swedenballpbmaker.png?raw=true',
+    'ノルウェー': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/norwayballpbmaker.png?raw=true',
+    'アイスランド': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/icelandballpbmaker.png?raw=true',
+    'コソボ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/kosovoballpbmaker.png?raw=true'
 }
 WSEUROPE_COUNTRY = {
     'フランス': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/franceballpbmaker.png?raw=true',
     'ドイツ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/germanyballpbmaker.png?raw=true',
     'イタリア': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/italyballpbmaker.png?raw=true',
+    'バチカン市国': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/vaticanballpbmaker.png?raw=true',
     'イギリス': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/ukballpbmaker.png?raw=true',
+    'アイルランド': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/irelandballpbmaker.png?raw=true',
+    'オランダ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/netherlandsballpbmaker.png?raw=true',
+    'ルクセンブルク': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/luxembourgballpbmaker.png?raw=true',
+    'ベルギー': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/belgiumballpbmaker.png?raw=true',
+    'スペイン': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/spainballpbmaker.png?raw=true',
+    'ポルトガル': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/portugalballpbmaker.png?raw=true',
+    'スイス': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/switzerlandballpbmaker.png?raw=true',
+    'オーストリア': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/austriaballpbmaker.png?raw=true',
+    'デンマーク': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/denmarkballpbmaker.png?raw=true',
+    'ギリシャ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/greeceballpbmaker.png?raw=true',
     'トルコ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/turkeyballpbmaker.png?raw=true'
 }
 
@@ -201,6 +234,10 @@ ORDINANCE_CITY = {
     '相模原市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/sagamiharaballpbmaker.png?raw=true'
 }
 
+TERRITORIES = {
+    'グリーンランド': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/greenlandballpbmaker.png?raw=true'
+}
+
 OTHERS = {
     'EU': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/euballpbmaker.png?raw=true',
     'An Untitled Editor': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/aueballpbmaker.png?raw=true',
@@ -262,6 +299,7 @@ CATEGORY_FLAGS = {
     '中核市（東北から関東）': TOHTOKAN_CORE,
     '中核市（中部から近畿）': CHUTOKIN_CORE,
     '中核市（中国から九州）': CHUTOKYU_CORE,
+    '海外領土・自治領': TERRITORIES,
     'その他': OTHERS,
     'なし': NONE
 }
@@ -285,6 +323,7 @@ CATEGORY_CHOICES = [
     app_commands.Choice(name='中核市（東北から関東）', value='中核市（東北から関東）'),
     app_commands.Choice(name='中核市（中部から近畿）', value='中核市（中部から近畿）'),
     app_commands.Choice(name='中核市（中国から九州）', value='中核市（中国から九州）'),
+    app_commands.Choice(name='海外領土・自治領', value='海外領土・自治領'),
     app_commands.Choice(name='その他', value='その他'),
     app_commands.Choice(name='なし', value='なし')
 ]
