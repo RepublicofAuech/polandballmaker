@@ -144,6 +144,17 @@ CARIBBEAN_COUNTRY = {
 
 SAMERICA_COUNTRY = {
     'アルゼンチン': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/argentinaballpbmaker.png?raw=true',
+    'チリ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/chileballpbmaker.png?raw=true',
+    'スリナム': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/surinameballpbmaker.png?raw=true',
+    'ガイアナ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/guyanaballpbmaker.png?raw=true',
+    'フランス領ギアナ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/frenchguianaballpbmaker.png?raw=true',
+    'ベネズエラ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/venezuelaballpbmaker.png?raw=true',
+    'コロンビア': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/colombiaballpbmaker.png?raw=true',
+    'エクアドル': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/ecuadorballpbmaker.png?raw=true',
+    'ペルー': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/peruballpbmaker.png?raw=true',
+    'ウルグアイ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/uruguayballpbmaker.png?raw=true',
+    'ボリビア': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/boliviaballpbmaker.png?raw=true',
+    'パラグアイ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/paraguayballpbmaker.png?raw=true',
     'ブラジル': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/brazilballpbmaker.png?raw=true'
 
 }
