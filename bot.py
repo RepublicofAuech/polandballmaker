@@ -418,6 +418,10 @@ TOKYO23WARDS = {
 
 OLDCOUNTRY = {
     'ソ連': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/ussrballpbmaker.png?raw=true',
+    'スペイン帝国': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/spanishempireballpbmaker.png?raw=true',
+    'ナ〇スドイツ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/germanreichballpbmaker.png?raw=true',
+    'ローマ帝国': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/romanempireballpbmaker.png?raw=true',
+    'オスマン帝国': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/ottomanempireballpbmaker.png?raw=true',
 }
 
 OTHERS = {
@@ -425,7 +429,6 @@ OTHERS = {
     '鳥取県信者ボール': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/believertottoripbmaker.png?raw=true',
     'きんら': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/kinrapbmaker.png?raw=true',
     'きんら(旧)': 'https://raw.githubusercontent.com/RepublicofAuech/polandballmaker/main/flags/kinrapbmaker2.png?raw=true',
-    '大日本帝国(mania)': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/japaneseempireballpbmaker.png?raw=true',
     'シンガポール(球状)': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/singaporeballpbmaker.png?raw=true',
     'カザフスタン(球状)': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/circlekazakhballpbmaker.png?raw=true',
     'らいる': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/rairuballpbmaker.png?raw=true',
