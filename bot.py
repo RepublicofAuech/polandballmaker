@@ -413,7 +413,9 @@ ORGANIZATIONS = {
 TOKYO23WARDS = {
     '中央区': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/chuouballpbmaker.png?raw=true',
     '千代田区': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/chiyodaballpbmaker.png?raw=true',
-    '港区': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/minatoballpbmaker.png?raw=true'
+    '港区': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/minatoballpbmaker.png?raw=true',
+    '新宿区': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/shinjukuballpbmaker.png?raw=true',
+    '渋谷区': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/shibuyaballpbmaker.png?raw=true',
 }
 
 OLDCOUNTRY = {
