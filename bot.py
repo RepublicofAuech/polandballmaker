@@ -406,12 +406,17 @@ ORGANIZATIONS = {
     'アフリカ連合 (AU)': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/auballpbmaker.png?raw=true',
     '国際連盟 (LoN)': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/lonballpbmaker.png?raw=true',
     '北大西洋条約機構 (NATO)': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/natoballpbmaker.png?raw=true',
+    'ワルシャワ条約機構': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/warsawpactballpbmaker.png?raw=true',
 }
 
 TOKYO23WARDS = {
     '中央区': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/chuouballpbmaker.png?raw=true',
     '千代田区': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/chiyodaballpbmaker.png?raw=true',
     '港区': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/minatoballpbmaker.png?raw=true'
+}
+
+OLDCOUNTRY = {
+    'ソ連': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/ussrballpbmaker.png?raw=true',
 }
 
 OTHERS = {
@@ -489,6 +494,7 @@ CATEGORY_FLAGS = {
     '海外領土・自治領、未承認国家': TERRITORIES,
     '組織': ORGANIZATIONS,
     '東京23区': TOKYO23WARDS,
+    '昔あった国': OLDCOUNTRY,
     'その他': OTHERS,
     'なし': NONE
 }
@@ -515,6 +521,7 @@ CATEGORY_CHOICES = [
     app_commands.Choice(name='中核市（中国から九州）', value='中核市（中国から九州）'),
     app_commands.Choice(name='海外領土・自治領、未承認国家', value='海外領土・自治領、未承認国家'),
     app_commands.Choice(name='組織', value='組織'),
+    app_commands.Choice(name='昔あった国', value='昔あった国'),
     app_commands.Choice(name='その他', value='その他'),
     app_commands.Choice(name='なし', value='なし')
 ]
