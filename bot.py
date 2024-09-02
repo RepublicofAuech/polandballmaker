@@ -41,6 +41,7 @@ ENEUROPE_COUNTRY = {
     'スウェーデン': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/swedenballpbmaker.png?raw=true',
     'ノルウェー': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/norwayballpbmaker.png?raw=true',
     'アイスランド': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/icelandballpbmaker.png?raw=true',
+    'ロシア': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/russiaballpbmaker.png?raw=true',
     'コソボ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/kosovoballpbmaker.png?raw=true'
 }
 WSEUROPE_COUNTRY = {
