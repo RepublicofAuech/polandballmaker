@@ -422,6 +422,7 @@ OLDCOUNTRY = {
     'ナ〇スドイツ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/germanreichballpbmaker.png?raw=true',
     'ローマ帝国': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/romanempireballpbmaker.png?raw=true',
     'オスマン帝国': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/ottomanempireballpbmaker.png?raw=true',
+    '大日本帝国': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/japaneseempireballpbmaker.png?raw=true',
 }
 
 OTHERS = {
