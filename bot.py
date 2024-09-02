@@ -130,7 +130,7 @@ NCAMERICA_COUNTRY = {
     'エルサルバドル': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/elsalvadorballpbmaker.png?raw=true',
     'ホンジュラス': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/hondurasballpbmaker.png?raw=true',
     'コスタリカ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/costaricaballpbmaker.png?raw=true',
-    'パナマ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/panamaballpbmaker.png?raw=true'
+    'パナマ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/panamballpbmaker.png?raw=true'
 }
 
 CARIBBEAN_COUNTRY = {
