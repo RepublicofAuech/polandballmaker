@@ -436,6 +436,15 @@ EXPRESSION_IMAGES = {
     'びっくり': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/eyes/scaredeyes.png?raw=true',
     'ぐっすり': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/eyes/closedeyes.png?raw=true',
     'かわいい': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/eyes/cuteeyes.png?raw=true',
+    'ほっとしてる': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/eyes/relievedeyes.png?raw=true',
+    '疑問（左目ver）': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/eyes/confusedeyes1.png?raw=true',
+    '疑問（右目ver）': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/eyes/confusedeyes2.png?raw=true',
+    '左目ウインク': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/eyes/winkeyes1.png?raw=true',
+    '右目ウインク': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/eyes/winkeyes2.png?raw=true',
+    'じーっと見てる': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/eyes/staringeyes.png?raw=true',
+    'ﾁｰﾝ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/eyes/deadeyes.png?raw=true',
+    '細目': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/eyes/thineyes.png?raw=true',
+    '退屈': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/eyes/boredeyes.png?raw=true',
     'なし': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/invisibleimage.png?raw=true'
 }
 
@@ -512,6 +521,16 @@ EXPRESSION_CHOICES = [
     app_commands.Choice(name='びっくり', value='びっくり'),
     app_commands.Choice(name='ぐっすり', value='ぐっすり'),
     app_commands.Choice(name='かわいい', value='かわいい'),
+    app_commands.Choice(name='ほっとしてる', value='ほっとしてる'),
+    app_commands.Choice(name='疑問（左目ver）', value='疑問（左目ver）'),
+    app_commands.Choice(name='疑問（右目ver）', value='疑問（右目ver）'),
+    app_commands.Choice(name='左目ウインク', value='左目ウインク'),
+    app_commands.Choice(name='右目ウインク', value='右目ウインク'),
+    app_commands.Choice(name='じーっと見てる', value='じーっと見てる'),
+    app_commands.Choice(name='ﾁｰﾝ', value='ﾁｰﾝ'),
+    app_commands.Choice(name='イライラ', value='イライラ'),
+    app_commands.Choice(name='細目', value='細目'),
+    app_commands.Choice(name='退屈', value='退屈'),
     app_commands.Choice(name='なし', value='なし')
 ]
 
