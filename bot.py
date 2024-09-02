@@ -445,6 +445,7 @@ EXPRESSION_IMAGES = {
     'ﾁｰﾝ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/eyes/deadeyes.png?raw=true',
     '細目': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/eyes/thineyes.png?raw=true',
     '退屈': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/eyes/boredeyes.png?raw=true',
+    'イライラ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/eyes/frustratedeyes.png?raw=true',
     'なし': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/invisibleimage.png?raw=true'
 }
 
