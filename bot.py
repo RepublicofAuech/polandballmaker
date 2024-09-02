@@ -408,6 +408,12 @@ ORGANIZATIONS = {
     '北大西洋条約機構 (NATO)': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/natoballpbmaker.png?raw=true',
 }
 
+TOKYO23WARDS = {
+    '中央区': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/chuouballpbmaker.png?raw=true',
+    '千代田区': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/chiyodaballpbmaker.png?raw=true',
+    '港区': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/minatoballpbmaker.png?raw=true'
+}
+
 OTHERS = {
     'An Untitled Editor': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/aueballpbmaker.png?raw=true',
     '鳥取県信者ボール': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/believertottoripbmaker.png?raw=true',
@@ -482,6 +488,7 @@ CATEGORY_FLAGS = {
     '中核市（中国から九州）': CHUTOKYU_CORE,
     '海外領土・自治領、未承認国家': TERRITORIES,
     '組織': ORGANIZATIONS,
+    '東京23区': TOKYO23WARDS
     'その他': OTHERS,
     'なし': NONE
 }
@@ -502,6 +509,7 @@ CATEGORY_CHOICES = [
     app_commands.Choice(name='都道府県（東北から中部）', value='都道府県（東北から中部）'),
     app_commands.Choice(name='都道府県（近畿から九州）', value='都道府県（近畿から九州）'),
     app_commands.Choice(name='政令市', value='政令市'),
+    app_commands.Choice(name='東京23区', value='東京23区'),
     app_commands.Choice(name='中核市（東北から関東）', value='中核市（東北から関東）'),
     app_commands.Choice(name='中核市（中部から近畿）', value='中核市（中部から近畿）'),
     app_commands.Choice(name='中核市（中国から九州）', value='中核市（中国から九州）'),
