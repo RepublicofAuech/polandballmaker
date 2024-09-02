@@ -488,7 +488,7 @@ CATEGORY_FLAGS = {
     '中核市（中国から九州）': CHUTOKYU_CORE,
     '海外領土・自治領、未承認国家': TERRITORIES,
     '組織': ORGANIZATIONS,
-    '東京23区': TOKYO23WARDS
+    '東京23区': TOKYO23WARDS,
     'その他': OTHERS,
     'なし': NONE
 }
