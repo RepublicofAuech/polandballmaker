@@ -518,7 +518,7 @@ CATEGORY_FLAGS = {
     '海外領土・自治領、未承認国家': TERRITORIES,
     '組織': ORGANIZATIONS,
     '東京23区': TOKYO23WARDS,
-    '特例市': SPECIAL_CITY
+    '特例市': SPECIAL_CITY,
     '昔あった国': OLDCOUNTRY,
     'その他': OTHERS,
     'なし': NONE
