@@ -445,6 +445,17 @@ OTHERS = {
     'チャワストム共和国': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/cawastomballpbmaker.png?raw=true'
 }
 
+SPECIAL_CITY = {
+    '佐賀市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/sagacityballpbmaker.png?raw=true',
+    '四日市市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/yokkaichiballpbmaker.png?raw=true',
+    'つくば市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/tsukubaballpbmaker.png?raw=true',
+    '厚木市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/atsugiballpbmaker.png?raw=true',
+    '長岡市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/nagaokaballpbmaker.png?raw=true',
+    '沼津市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/numazuballpbmaker.png?raw=true',
+    '加古川市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/kakogawaballpbmaker.png?raw=true',
+    '茨木市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/ibarakicityballpbmaker.png?raw=true',
+}
+
 NONE = {
     'なし': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/invisibleimage.png?raw=true'
 }
@@ -507,6 +518,7 @@ CATEGORY_FLAGS = {
     '海外領土・自治領、未承認国家': TERRITORIES,
     '組織': ORGANIZATIONS,
     '東京23区': TOKYO23WARDS,
+    '特例市': SPECIAL_CITY
     '昔あった国': OLDCOUNTRY,
     'その他': OTHERS,
     'なし': NONE
@@ -529,6 +541,7 @@ CATEGORY_CHOICES = [
     app_commands.Choice(name='都道府県（近畿から九州）', value='都道府県（近畿から九州）'),
     app_commands.Choice(name='政令市', value='政令市'),
     app_commands.Choice(name='東京23区', value='東京23区'),
+    app_commands.Choice(name='特例市', value='特例市'),
     app_commands.Choice(name='中核市（東北から関東）', value='中核市（東北から関東）'),
     app_commands.Choice(name='中核市（中部から近畿）', value='中核市（中部から近畿）'),
     app_commands.Choice(name='中核市（中国から九州）', value='中核市（中国から九州）'),
