@@ -416,6 +416,11 @@ TOKYO23WARDS = {
     '港区': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/minatoballpbmaker.png?raw=true',
     '新宿区': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/shinjukuballpbmaker.png?raw=true',
     '渋谷区': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/shibuyaballpbmaker.png?raw=true',
+    '豊島区': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/toyoshimaballpbmaker.png?raw=true',
+    '江東区': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/kotoballpbmaker.png?raw=true',
+    '品川区': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/shinagawaballpbmaker.png?raw=true',
+    '文京区': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/bunkyoballpbmaker.png?raw=true',
+    '台東区': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/taitoballpbmaker.png?raw=true',
 }
 
 OLDCOUNTRY = {
@@ -436,6 +441,7 @@ OTHERS = {
     'カザフスタン(球状)': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/circlekazakhballpbmaker.png?raw=true',
     'らいる': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/rairuballpbmaker.png?raw=true',
     'なめこch': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/namekoballpbmaker.png?raw=true',
+    '四国連邦': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/shikokurenpoballpbmaker.png?raw=true',
     'チャワストム共和国': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/cawastomballpbmaker.png?raw=true'
 }
 
