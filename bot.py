@@ -421,6 +421,18 @@ TOKYO23WARDS = {
     '品川区': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/shinagawaballpbmaker.png?raw=true',
     '文京区': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/bunkyoballpbmaker.png?raw=true',
     '台東区': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/taitoballpbmaker.png?raw=true',
+    '墨田区': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/sumidaballpbmaker.png?raw=true',
+    '目黒区': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/meguroballpbmaker.png?raw=true',
+    '大田区': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/odaballpbmaker.png?raw=true',
+    '世田谷区': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/setagayaballpbmaker.png?raw=true',
+    '中野区': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/nakanoballpbmaker.png?raw=true',
+    '杉並区': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/suginamiballpbmaker.png?raw=true',
+    '北区': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/kitaballpbmaker.png?raw=true',
+    '板橋区': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/itabashiballpbmaker.png?raw=true',
+    '足立区': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/adachiballpbmaker.png?raw=true',
+    '練馬区': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/nerimaballpbmaker.png?raw=true',
+    '葛飾区': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/katsushikaballpbmaker.png?raw=true',
+    '江戸川区': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/edogawaballpbmaker.png?raw=true'
 }
 
 OLDCOUNTRY = {
