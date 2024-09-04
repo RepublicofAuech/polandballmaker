@@ -524,7 +524,6 @@ CATEGORY_FLAGS = {
     '組織': ORGANIZATIONS,
     '東京23区': TOKYO23WARDS,
     '特例市、その他の都市': SPECIAL_CITY,
-    'その他の都市': OTHER_CITY,
     '昔あった国': OLDCOUNTRY,
     'その他': OTHERS,
     'なし': NONE
