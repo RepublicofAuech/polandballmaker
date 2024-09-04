@@ -432,7 +432,7 @@ OLDCOUNTRY = {
     '大日本帝国': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/japaneseempireballpbmaker.png?raw=true',
 }
 
-OTHER_CITIES = {
+OTHER_CITY = {
     '藤沢市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/fujisawaballpbmaker.png?raw=true',
     '津市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/tsuballpbmaker.png?raw=true',
     '市川市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/ichikawaballpbmaker.png?raw=true',
