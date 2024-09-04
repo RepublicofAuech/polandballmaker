@@ -432,6 +432,14 @@ OLDCOUNTRY = {
     '大日本帝国': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/japaneseempireballpbmaker.png?raw=true',
 }
 
+OTHER_CITIES = {
+    '藤沢市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/fujisawaballpbmaker.png?raw=true',
+    '津市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/tsuballpbmaker.png?raw=true',
+    '市川市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/ichikawaballpbmaker.png?raw=true',
+    '松戸市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/matsudoballpbmaker.png?raw=true',
+    '徳島市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/tokushimacityballpbmaker.png?raw=true',
+}
+
 OTHERS = {
     'An Untitled Editor': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/aueballpbmaker.png?raw=true',
     '鳥取県信者ボール': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/believertottoripbmaker.png?raw=true',
@@ -519,6 +527,7 @@ CATEGORY_FLAGS = {
     '組織': ORGANIZATIONS,
     '東京23区': TOKYO23WARDS,
     '特例市': SPECIAL_CITY,
+    'その他の都市': OTHER_CITY,
     '昔あった国': OLDCOUNTRY,
     'その他': OTHERS,
     'なし': NONE
@@ -545,6 +554,7 @@ CATEGORY_CHOICES = [
     app_commands.Choice(name='中核市（東北から関東）', value='中核市（東北から関東）'),
     app_commands.Choice(name='中核市（中部から近畿）', value='中核市（中部から近畿）'),
     app_commands.Choice(name='中核市（中国から九州）', value='中核市（中国から九州）'),
+    app_commands.Choice(name='その他の都市', value='その他の都市'),
     app_commands.Choice(name='海外領土・自治領、未承認国家', value='海外領土・自治領、未承認国家'),
     app_commands.Choice(name='組織', value='組織'),
     app_commands.Choice(name='昔あった国', value='昔あった国'),
