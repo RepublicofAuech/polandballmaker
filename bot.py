@@ -491,6 +491,22 @@ SPECIAL_CITY = {
     '宝塚市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/takarazukaballpbmaker.png?raw=true',
 }
 
+OTHER_CITY_TOHTOKAN = {
+    '松戸市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/matsudoballpbmaker.png?raw=true',
+    '市川市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/ichikawaballpbmaker.png?raw=true',
+    '藤沢市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/fujisawaballpbmaker.png?raw=true',
+}
+
+OTHER_CITY_CHUTOKIN = {
+    '長浜市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/nagahamaballpbmaker.png?raw=true',
+    '東海市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/tokaiballpbmaker.png?raw=true',
+    '津市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/tsuballpbmaker.png?raw=true',
+}
+
+OTHER_CITY_CHUTOKYU = {
+    '徳島市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/tokushimacityballpbmaker.png?raw=true',
+}
+
 NONE = {
     'なし': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/invisibleimage.png?raw=true'
 }
@@ -554,6 +570,9 @@ CATEGORY_FLAGS = {
     '組織': ORGANIZATIONS,
     '東京23区': TOKYO23WARDS,
     '特例市': SPECIAL_CITY,
+    'その他の都市（東北から関東）': OTHER_CITY_TOHTOKAN,
+    'その他の都市（中部から近畿）': OTHER_CITY_CHUTOKIN,
+    'その他の都市（中国から九州）': OTHER_CITY_CHUTOKYU,
     '昔あった国': OLDCOUNTRY,
     'その他': OTHERS,
     'なし': NONE
@@ -588,6 +607,9 @@ JAPAN_CHOICES = [
     app_commands.Choice(name='中核市（中部から近畿）', value='中核市（中部から近畿）'),
     app_commands.Choice(name='中核市（中国から九州）', value='中核市（中国から九州）'),
     app_commands.Choice(name='特例市', value='特例市'),
+    app_commands.Choice(name='その他の都市（東北から関東）', value='その他の都市（東北から関東）'),
+    app_commands.Choice(name='その他の都市（中部から近畿）', value='その他の都市（中部から近畿）'),
+    app_commands.Choice(name='その他の都市（中国から九州）', value='その他の都市（中国から九州）'),
     app_commands.Choice(name='なし', value='なし')
 ]
 
