@@ -17,6 +17,7 @@ async def on_ready():
 
 # Dictionaries to map inputs to corresponding images
 
+
 ENEUROPE_COUNTRY = {
     'ポーランド': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/polandballpbmaker1.png?raw=true',
     'チェコ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/czechiaballpbmaker.png?raw=true',
@@ -558,7 +559,7 @@ CATEGORY_FLAGS = {
     'なし': NONE
 }
 
-CATEGORY_CHOICES = [
+WORLD_CHOICES = [
     app_commands.Choice(name='西・南ヨーロッパの国々', value='西・南ヨーロッパの国々'),
     app_commands.Choice(name='東・北ヨーロッパの国々', value='東・北ヨーロッパの国々'),
     app_commands.Choice(name='西アジアの国々', value='西アジアの国々'),
@@ -571,17 +572,26 @@ CATEGORY_CHOICES = [
     app_commands.Choice(name='中央・南アフリカの国々', value='中央・南アフリカの国々'),
     app_commands.Choice(name='東アフリカの国々', value='東アフリカの国々'),
     app_commands.Choice(name='オセアニアの国々', value='オセアニアの国々'),
+    app_commands.Choice(name='海外領土・自治領、未承認国家', value='海外領土・自治領、未承認国家'),
+    app_commands.Choice(name='組織', value='組織'),
+    app_commands.Choice(name='昔あった国', value='昔あった国'),
+    app_commands.Choice(name='その他', value='その他'),
+    app_commands.Choice(name='なし', value='なし')
+]
+
+JAPAN_CHOICES = [
     app_commands.Choice(name='都道府県（東北から中部）', value='都道府県（東北から中部）'),
     app_commands.Choice(name='都道府県（近畿から九州）', value='都道府県（近畿から九州）'),
     app_commands.Choice(name='政令市', value='政令市'),
     app_commands.Choice(name='東京23区', value='東京23区'),
-    app_commands.Choice(name='特例市', value='特例市'),
     app_commands.Choice(name='中核市（東北から関東）', value='中核市（東北から関東）'),
     app_commands.Choice(name='中核市（中部から近畿）', value='中核市（中部から近畿）'),
     app_commands.Choice(name='中核市（中国から九州）', value='中核市（中国から九州）'),
-    app_commands.Choice(name='海外領土・自治領、未承認国家', value='海外領土・自治領、未承認国家'),
-    app_commands.Choice(name='組織', value='組織'),
-    app_commands.Choice(name='昔あった国', value='昔あった国'),
+    app_commands.Choice(name='特例市', value='特例市'),
+    app_commands.Choice(name='なし', value='なし')
+]
+
+OTHER_CHOICES = [
     app_commands.Choice(name='その他', value='その他'),
     app_commands.Choice(name='なし', value='なし')
 ]
@@ -680,14 +690,110 @@ def merge_images(flag_img, expression_img, position):
 # Command to create the Polandball image
 
 
-@bot.tree.command(name='pb_maker', description='指定されたポーランドボールを作成します')
+@bot.tree.command(name='pbmaker_japan', description='日本の都市などのポーランドボールを作成します')
 @app_commands.describe(
     category='柄のカテゴリーを選んでください',
     country='国、都道府県または市区町村を選んでください',
     expression='ボールの表情を選んでください',
     position='目の位置を選んでください'
 )
-@app_commands.choices(category=CATEGORY_CHOICES, expression=EXPRESSION_CHOICES, position=POSITION_CHOICES)
+@app_commands.choices(category=JAPAN_CHOICES, expression=EXPRESSION_CHOICES, position=POSITION_CHOICES)
+@app_commands.autocomplete(country=get_country_choices)
+async def pb_maker(interaction: discord.Interaction,
+                   category: app_commands.Choice[str],
+                   country: str,
+                   expression: app_commands.Choice[str],
+                   position: app_commands.Choice[str]):
+
+    await interaction.response.defer()
+
+    # Fetch the flag URL based on category and country
+    flag_url = CATEGORY_FLAGS[category.value].get(country)
+    if not flag_url:
+        await interaction.response.send_message("指定された国や地域の旗画像が見つかりませんでした", ephemeral=True)
+        return
+
+    # Fetch the expression image URL or set to None if expression is 'なし'
+    expression_url = EXPRESSION_IMAGES.get(expression.value, None)
+    
+    # Fetch the images
+    flag_img = await fetch_image(flag_url)
+    expression_img = await fetch_image(expression_url) if expression_url else None
+    
+    if not flag_img:
+        await interaction.response.send_message("旗の画像を取得できませんでした。再試行してください", ephemeral=True)
+        return
+
+    # Merge images based on position
+    try:
+        combined_img = merge_images(flag_img, expression_img, position.value)
+    except Exception as e:
+        await interaction.response.send_message(f"画像の合成中にエラーが発生しました: {e}", ephemeral=True)
+        return
+
+    # Save and send the image
+    with io.BytesIO() as output:
+        combined_img.save(output, format='PNG')
+        output.seek(0)
+        file = discord.File(output, filename='polandball.png')
+        await interaction.followup.send(file=file)
+
+@bot.tree.command(name='pbmaker_world', description='世界の国、組織などのポーランドボールを作成します')
+@app_commands.describe(
+    category='柄のカテゴリーを選んでください',
+    country='国、都道府県または市区町村を選んでください',
+    expression='ボールの表情を選んでください',
+    position='目の位置を選んでください'
+)
+@app_commands.choices(category=WORLD_CHOICES, expression=EXPRESSION_CHOICES, position=POSITION_CHOICES)
+@app_commands.autocomplete(country=get_country_choices)
+async def pb_maker(interaction: discord.Interaction,
+                   category: app_commands.Choice[str],
+                   country: str,
+                   expression: app_commands.Choice[str],
+                   position: app_commands.Choice[str]):
+
+    await interaction.response.defer()
+
+    # Fetch the flag URL based on category and country
+    flag_url = CATEGORY_FLAGS[category.value].get(country)
+    if not flag_url:
+        await interaction.response.send_message("指定された国や地域の旗画像が見つかりませんでした", ephemeral=True)
+        return
+
+    # Fetch the expression image URL or set to None if expression is 'なし'
+    expression_url = EXPRESSION_IMAGES.get(expression.value, None)
+    
+    # Fetch the images
+    flag_img = await fetch_image(flag_url)
+    expression_img = await fetch_image(expression_url) if expression_url else None
+    
+    if not flag_img:
+        await interaction.response.send_message("旗の画像を取得できませんでした。再試行してください", ephemeral=True)
+        return
+
+    # Merge images based on position
+    try:
+        combined_img = merge_images(flag_img, expression_img, position.value)
+    except Exception as e:
+        await interaction.response.send_message(f"画像の合成中にエラーが発生しました: {e}", ephemeral=True)
+        return
+
+    # Save and send the image
+    with io.BytesIO() as output:
+        combined_img.save(output, format='PNG')
+        output.seek(0)
+        file = discord.File(output, filename='polandball.png')
+        await interaction.followup.send(file=file)
+
+@bot.tree.command(name='pbmaker_other', description='世界または日本とは関係ないポーランドボールを作成します')
+@app_commands.describe(
+    category='柄のカテゴリーを選んでください',
+    country='国、都道府県または市区町村を選んでください',
+    expression='ボールの表情を選んでください',
+    position='目の位置を選んでください'
+)
+@app_commands.choices(category=OTHER_CHOICES, expression=EXPRESSION_CHOICES, position=POSITION_CHOICES)
 @app_commands.autocomplete(country=get_country_choices)
 async def pb_maker(interaction: discord.Interaction,
                    category: app_commands.Choice[str],
