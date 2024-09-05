@@ -462,6 +462,8 @@ OTHERS = {
     'なめこch': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/namekoballpbmaker.png?raw=true',
     '四国連邦': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/shikokurenpoballpbmaker.png?raw=true',
     'チャワストム共和国': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/cawastomballpbmaker.png?raw=true'
+    'アウイック共和国': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/auechballpbmaker.png?raw=true'
+    'フォノッサ共和国': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/fonossaballpbmaker.png?raw=true'
 }
 
 SPECIAL_CITY = {
