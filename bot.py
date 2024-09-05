@@ -495,16 +495,26 @@ OTHER_CITY_TOHTOKAN = {
     '松戸市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/matsudoballpbmaker.png?raw=true',
     '市川市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/ichikawaballpbmaker.png?raw=true',
     '藤沢市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/fujisawaballpbmaker.png?raw=true',
+    '鶴岡市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/tsuruokaballpbmaker.png?raw=true',
+    '館林市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/datebayashiballpbmaker.png?raw=true',
 }
 
 OTHER_CITY_CHUTOKIN = {
     '長浜市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/nagahamaballpbmaker.png?raw=true',
     '東海市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/tokaiballpbmaker.png?raw=true',
     '津市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/tsuballpbmaker.png?raw=true',
+    '橿原市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/kashiwaraballpbmaker.png?raw=true',
+    '安城市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/anjoballpbmaker.png?raw=true',
+    '伊勢市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/iseballpbmaker.png?raw=true',
+    '宇治市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/ujiballpbmaker.png?raw=true',
 }
 
 OTHER_CITY_CHUTOKYU = {
     '徳島市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/tokushimacityballpbmaker.png?raw=true',
+    '山口市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/yamaguchicityballpbmaker.png?raw=true',
+    '今治市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/imabariballpbmaker.png?raw=true',
+    '米子市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/yonagoballpbmaker.png?raw=true',
+    '唐津市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/karatsuballpbmaker.png?raw=true',
 }
 
 NONE = {
