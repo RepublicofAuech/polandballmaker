@@ -442,6 +442,11 @@ OLDCOUNTRY = {
     'ローマ帝国': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/romanempireballpbmaker.png?raw=true',
     'オスマン帝国': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/ottomanempireballpbmaker.png?raw=true',
     '大日本帝国': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/japaneseempireballpbmaker.png?raw=true',
+    '大韓帝国': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/koreanempireballpbmaker.png?raw=true',
+    'ロシア帝国': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/russianempireballpbmaker.png?raw=true',
+    '南ベトナム': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/southvietnamballpbmaker.png?raw=true',
+    '清': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/qingballpbmaker.png?raw=true',
+    '満州国': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/manchuriamballpbmaker.png?raw=true',
 }
 
 OTHERS = {
