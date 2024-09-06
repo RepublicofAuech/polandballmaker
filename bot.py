@@ -768,7 +768,7 @@ async def pb_maker(interaction: discord.Interaction,
     await interaction.response.defer()
 
     # Fetch the flag URL based on category and country
-    shadow_url = SHADOW_ONOFF.get(shadow.value, None)
+    shadow_url = SHADOW_CHOICES.get(shadow.value, None)
     flag_url = CATEGORY_FLAGS[category.value].get(country)
     if not flag_url:
         await interaction.response.send_message("指定された国や地域の旗画像が見つかりませんでした", ephemeral=True)
@@ -802,6 +802,7 @@ async def pb_maker(interaction: discord.Interaction,
 
 @bot.tree.command(name='pbmaker_world', description='世界の国、組織などのポーランドボールを作成します')
 @app_commands.describe(
+    shadow='影の有無を選択してください',
     category='柄のカテゴリーを選んでください',
     country='国、都道府県または市区町村を選んでください',
     expression='ボールの表情を選んでください',
@@ -819,7 +820,7 @@ async def pb_maker(interaction: discord.Interaction,
     await interaction.response.defer()
 
     # Fetch the flag URL based on category and country
-    shadow_url = SHADOW_ONOFF.get(shadow.value, None)
+    shadow_url = SHADOW_CHOICES.get(shadow.value, None)
     flag_url = CATEGORY_FLAGS[category.value].get(country)
     if not flag_url:
         await interaction.response.send_message("指定された国や地域の旗画像が見つかりませんでした", ephemeral=True)
@@ -853,6 +854,7 @@ async def pb_maker(interaction: discord.Interaction,
 
 @bot.tree.command(name='pbmaker_other', description='世界または日本とは関係ないポーランドボールを作成します')
 @app_commands.describe(
+    shadow='影の有無を選択してください',
     category='柄のカテゴリーを選んでください',
     country='国、都道府県または市区町村を選んでください',
     expression='ボールの表情を選んでください',
@@ -870,7 +872,7 @@ async def pb_maker(interaction: discord.Interaction,
     await interaction.response.defer()
 
     # Fetch the flag URL based on category and country
-    shadow_url = SHADOW_ONOFF.get(shadow.value, None)
+    shadow_url = SHADOW_CHOICES.get(shadow.value, None)
     flag_url = CATEGORY_FLAGS[category.value].get(country)
     if not flag_url:
         await interaction.response.send_message("指定された国や地域の旗画像が見つかりませんでした", ephemeral=True)
