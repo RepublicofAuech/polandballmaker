@@ -757,7 +757,7 @@ def merge_images(shadow_img, flag_img, expression_img, position):
     position='目の位置を選んでください',
     shadow='影の有無を選択してください'
 )
-@app_commands.choices(shadow=SHADOW_CHOICES, category=JAPAN_CHOICES, expression=EXPRESSION_CHOICES, position=POSITION_CHOICES)
+@app_commands.choices(category=JAPAN_CHOICES, expression=EXPRESSION_CHOICES, position=POSITION_CHOICES, shadow=SHADOW_CHOICES)
 @app_commands.autocomplete(country=get_country_choices)
 async def pb_maker(interaction: discord.Interaction,
                    shadow: app_commands.Choice[str],
@@ -811,7 +811,7 @@ async def pb_maker(interaction: discord.Interaction,
     position='目の位置を選んでください',
     shadow='影の有無を選択してください'
 )
-@app_commands.choices(shadow=SHADOW_CHOICES, category=WORLD_CHOICES, expression=EXPRESSION_CHOICES, position=POSITION_CHOICES)
+@app_commands.choices(category=WORLD_CHOICES, expression=EXPRESSION_CHOICES, position=POSITION_CHOICES, shadow=SHADOW_CHOICES)
 @app_commands.autocomplete(country=get_country_choices)
 async def pb_maker(interaction: discord.Interaction,
                    shadow: app_commands.Choice[str],
@@ -865,7 +865,7 @@ async def pb_maker(interaction: discord.Interaction,
     position='目の位置を選んでください',
     shadow='影の有無を選択してください'
 )
-@app_commands.choices(shadow=SHADOW_CHOICES, category=OTHER_CHOICES, expression=EXPRESSION_CHOICES, position=POSITION_CHOICES)
+@app_commands.choices(category=OTHER_CHOICES, expression=EXPRESSION_CHOICES, position=POSITION_CHOICES, shadow=SHADOW_CHOICES)
 @app_commands.autocomplete(country=get_country_choices)
 async def pb_maker(interaction: discord.Interaction,
                    shadow: app_commands.Choice[str],
