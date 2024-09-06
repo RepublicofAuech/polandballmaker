@@ -471,6 +471,7 @@ OTHERS = {
     'アドラフ民主主義共和国連邦': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/adorafuballpbmaker.png?raw=true',
     'ミネラル共和国': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/mineralballpbmaker.png?raw=true',
     'サフォーニウ共和国': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/safoniuballpbmaker.png?raw=true',
+    'アレテーカ共和国': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/arretecaballpbmaker.png?raw=true',
     '吹奏楽部のイメージ旗': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/brassbandballpbmaker.png?raw=true',
 }
 
