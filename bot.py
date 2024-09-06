@@ -774,7 +774,7 @@ async def pb_maker(interaction: discord.Interaction,
     await interaction.response.defer()
 
     # Fetch the flag URL based on category and country
-    shadow_url = SHADOW_ONOFF.get(shadow.value)  # Fetch shadow URL based on user's choice
+    shadow_url = SHADOW_ONOFF.get(shadow.value)  # Directly access the URL from the dictionary
     flag_url = CATEGORY_FLAGS[category.value].get(country)
     if not flag_url:
         await interaction.response.send_message("指定された国や地域の旗画像が見つかりませんでした", ephemeral=True)
@@ -826,9 +826,7 @@ async def pb_maker(interaction: discord.Interaction,
     await interaction.response.defer()
 
     # Fetch the flag URL based on category and country
-    shadow_url = SHADOW_ONOFF.get(shadow.value, None)
-    if isinstance(shadow_url, dict):
-        shadow_url = shadow_url.get(shadow.value, None) 
+    shadow_url = SHADOW_ONOFF.get(shadow.value)  # Directly access the URL from the dictionary
     flag_url = CATEGORY_FLAGS[category.value].get(country)
     if not flag_url:
         await interaction.response.send_message("指定された国や地域の旗画像が見つかりませんでした", ephemeral=True)
@@ -838,7 +836,7 @@ async def pb_maker(interaction: discord.Interaction,
     expression_url = EXPRESSION_IMAGES.get(expression.value, None)
     
     # Fetch the images
-    shadow_img = await fetch_image(shadow_url)
+    shadow_img = await fetch_image(shadow_url) if shadow_url else None  # Fetch shadow image only if URL is valid
     flag_img = await fetch_image(flag_url)
     expression_img = await fetch_image(expression_url) if expression_url else None
     
@@ -880,7 +878,7 @@ async def pb_maker(interaction: discord.Interaction,
     await interaction.response.defer()
 
     # Fetch the flag URL based on category and country
-    shadow_url = SHADOW_ONOFF.get(shadow.value)  # Fetch shadow URL based on user's choice
+    shadow_url = SHADOW_ONOFF.get(shadow.value)  # Directly access the URL from the dictionary
     flag_url = CATEGORY_FLAGS[category.value].get(country)
     if not flag_url:
         await interaction.response.send_message("指定された国や地域の旗画像が見つかりませんでした", ephemeral=True)
