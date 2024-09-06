@@ -704,8 +704,6 @@ async def fetch_image(url):
                 return None
 
 # Function to merge the flag and expression images with more offset for each predefined position
-
-
 def merge_images(shadow_img, flag_img, expression_img, position):
     if expression_img is None:
         print("No expression image provided.")
@@ -772,7 +770,8 @@ async def pb_maker(interaction: discord.Interaction,
     await interaction.response.defer()
 
     # Fetch the flag URL based on category and country
-    shadow_url = SHADOW_ONOFF.get(shadow.value)  # Directly access the URL from the dictionary
+    shadow_url = SHADOW_ONOFF[shadow.value]  # Correctly fetches the URL or None
+    print(f"Fetched shadow URL: {shadow_url}")  # Debugging output
     flag_url = CATEGORY_FLAGS[category.value].get(country)
     if not flag_url:
         await interaction.response.send_message("指定された国や地域の旗画像が見つかりませんでした", ephemeral=True)
@@ -824,7 +823,8 @@ async def pb_maker(interaction: discord.Interaction,
     await interaction.response.defer()
 
     # Fetch the flag URL based on category and country
-    shadow_url = SHADOW_ONOFF.get(shadow.value)  # Directly access the URL from the dictionary
+    shadow_url = SHADOW_ONOFF[shadow.value]  # Correctly fetches the URL or None
+    print(f"Fetched shadow URL: {shadow_url}")  # Debugging output
     flag_url = CATEGORY_FLAGS[category.value].get(country)
     if not flag_url:
         await interaction.response.send_message("指定された国や地域の旗画像が見つかりませんでした", ephemeral=True)
@@ -855,7 +855,7 @@ async def pb_maker(interaction: discord.Interaction,
         output.seek(0)
         file = discord.File(output, filename='polandball.png')
         await interaction.followup.send(file=file)
-
+        
 @bot.tree.command(name='pbmaker_other', description='世界または日本とは関係ないポーランドボールを作成します')
 @app_commands.describe(
     shadow='影の有無を選択してください',
@@ -876,7 +876,8 @@ async def pb_maker(interaction: discord.Interaction,
     await interaction.response.defer()
 
     # Fetch the flag URL based on category and country
-    shadow_url = SHADOW_ONOFF.get(shadow.value)  # Directly access the URL from the dictionary
+    shadow_url = SHADOW_ONOFF[shadow.value]  # Correctly fetches the URL or None
+    print(f"Fetched shadow URL: {shadow_url}")  # Debugging output
     flag_url = CATEGORY_FLAGS[category.value].get(country)
     if not flag_url:
         await interaction.response.send_message("指定された国や地域の旗画像が見つかりませんでした", ephemeral=True)
