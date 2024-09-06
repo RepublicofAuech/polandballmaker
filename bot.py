@@ -689,6 +689,9 @@ async def get_country_choices(interaction: discord.Interaction, current: str):
 
 
 async def fetch_image(url):
+    if not isinstance(url, str) or not url:  # Check if URL is a valid string
+        print(f"Invalid URL provided: {url}")
+        return None
     async with aiohttp.ClientSession() as session:
         async with session.get(url) as response:
             if response.status == 200:
