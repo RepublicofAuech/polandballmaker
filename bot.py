@@ -700,44 +700,49 @@ async def fetch_image(url):
 
 # Function to merge the flag and expression images with more offset for each predefined position
 def merge_images(shadow_img, flag_img, expression_img, position):
-        
-    if expression_img is None:
-        print("No expression image provided.")
-        return flag_img
-
     # Convert expression_img to RGBA if not already
-    if expression_img.mode != 'RGBA':
+    if expression_img and expression_img.mode != 'RGBA':
         expression_img = expression_img.convert('RGBA')
-
+    
     # Resize the expression image to 100% of the flag's size
-    expression_img = expression_img.resize(
-        (flag_img.width, flag_img.height), Image.LANCZOS)
+    if expression_img:
+        expression_img = expression_img.resize((flag_img.width, flag_img.height), Image.LANCZOS)
 
     # Define offset values for more exaggerated positions
     offset_x, offset_y = 120, 120  # Adjust these values for more or less offset
 
     # Define positions with more offset
     positions = {
-        '真ん中': ((flag_img.width - expression_img.width) // 2, (flag_img.height - expression_img.height) // 2),
-        '上': ((flag_img.width - expression_img.width) // 2, -offset_y),
-        '下': ((flag_img.width - expression_img.width) // 2, flag_img.height - expression_img.height + offset_y),
-        '左': (-offset_x, (flag_img.height - expression_img.height) // 2),
-        '右': (flag_img.width - expression_img.width + offset_x, (flag_img.height - expression_img.height) // 2),
-        '右上': (flag_img.width - expression_img.width + offset_x, -offset_y),
-        '右下': (flag_img.width - expression_img.width + offset_x, flag_img.height - expression_img.height + offset_y),
-        '左下': (-offset_x, flag_img.height - expression_img.height + offset_y),
+        '真ん中': ((flag_img.width - (expression_img.width if expression_img else flag_img.width)) // 2, (flag_img.height - (expression_img.height if expression_img else flag_img.height)) // 2),
+        '上': ((flag_img.width - (expression_img.width if expression_img else flag_img.width)) // 2, -offset_y),
+        '下': ((flag_img.width - (expression_img.width if expression_img else flag_img.width)) // 2, flag_img.height - (expression_img.height if expression_img else flag_img.height) + offset_y),
+        '左': (-offset_x, (flag_img.height - (expression_img.height if expression_img else flag_img.height)) // 2),
+        '右': (flag_img.width - (expression_img.width if expression_img else flag_img.width) + offset_x, (flag_img.height - (expression_img.height if expression_img else flag_img.height)) // 2),
+        '右上': (flag_img.width - (expression_img.width if expression_img else flag_img.width) + offset_x, -offset_y),
+        '右下': (flag_img.width - (expression_img.width if expression_img else flag_img.width) + offset_x, flag_img.height - (expression_img.height if expression_img else flag_img.height) + offset_y),
+        '左下': (-offset_x, flag_img.height - (expression_img.height if expression_img else flag_img.height) + offset_y),
         '左上': (-offset_x, -offset_y),
     }
 
     # Get the coordinates for the given position
-    x, y = positions.get(position, ((flag_img.width - expression_img.width) //
-                         2, (flag_img.height - expression_img.height) // 2))
+    x, y = positions.get(position, ((flag_img.width - (expression_img.width if expression_img else flag_img.width)) // 2, (flag_img.height - (expression_img.height if expression_img else flag_img.height)) // 2))
+
+    # Create a new image to paste layers onto
+    combined_img = Image.new('RGBA', (flag_img.width, flag_img.height), (0, 0, 0, 0))
+
+    # If shadow image exists, calculate its position with a downward offset
+    if shadow_img:
+        shadow_offset_y = 10  # Move the shadow 10 pixels down; adjust this value as needed
+        shadow_x = (flag_img.width - shadow_img.width) // 2  # Center the shadow horizontally
+        shadow_y = (flag_img.height - shadow_img.height) // 2 + shadow_offset_y  # Center vertically and move down
+        combined_img.paste(shadow_img, (shadow_x, shadow_y), shadow_img)
+
+    # Paste the flag image on top of the shadow
+    combined_img.paste(flag_img, (0, 0), flag_img)
 
     # Merge the expression onto the flag image
-    combined_img = flag_img.copy()
-    if shadow_img:
-        combined_img.paste(shadow_img, (0, 0), shadow_img)
-    combined_img.paste(expression_img, (x, y), expression_img)
+    if expression_img:
+        combined_img.paste(expression_img, (x, y), expression_img)
 
     return combined_img
 
