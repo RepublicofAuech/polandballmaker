@@ -751,11 +751,11 @@ def merge_images(shadow_img, flag_img, expression_img, position):
 
 @bot.tree.command(name='pbmaker_japan', description='日本の都市などのポーランドボールを作成します')
 @app_commands.describe(
-    shadow='影の有無を選択してください',
     category='柄のカテゴリーを選んでください',
     country='国、都道府県または市区町村を選んでください',
     expression='ボールの表情を選んでください',
-    position='目の位置を選んでください'
+    position='目の位置を選んでください',
+    shadow='影の有無を選択してください'
 )
 @app_commands.choices(shadow=SHADOW_CHOICES, category=JAPAN_CHOICES, expression=EXPRESSION_CHOICES, position=POSITION_CHOICES)
 @app_commands.autocomplete(country=get_country_choices)
@@ -805,11 +805,11 @@ async def pb_maker(interaction: discord.Interaction,
         
 @bot.tree.command(name='pbmaker_world', description='世界の国、組織などのポーランドボールを作成します')
 @app_commands.describe(
-    shadow='影の有無を選択してください',
     category='柄のカテゴリーを選んでください',
     country='国、都道府県または市区町村を選んでください',
     expression='ボールの表情を選んでください',
-    position='目の位置を選んでください'
+    position='目の位置を選んでください',
+    shadow='影の有無を選択してください'
 )
 @app_commands.choices(shadow=SHADOW_CHOICES, category=WORLD_CHOICES, expression=EXPRESSION_CHOICES, position=POSITION_CHOICES)
 @app_commands.autocomplete(country=get_country_choices)
@@ -859,11 +859,11 @@ async def pb_maker(interaction: discord.Interaction,
         
 @bot.tree.command(name='pbmaker_other', description='世界または日本とは関係ないポーランドボールを作成します')
 @app_commands.describe(
-    shadow='影の有無を選択してください',
     category='柄のカテゴリーを選んでください',
     country='国、都道府県または市区町村を選んでください',
     expression='ボールの表情を選んでください',
-    position='目の位置を選んでください'
+    position='目の位置を選んでください',
+    shadow='影の有無を選択してください'
 )
 @app_commands.choices(shadow=SHADOW_CHOICES, category=OTHER_CHOICES, expression=EXPRESSION_CHOICES, position=POSITION_CHOICES)
 @app_commands.autocomplete(country=get_country_choices)
