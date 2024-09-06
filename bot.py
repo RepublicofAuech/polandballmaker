@@ -772,6 +772,8 @@ async def pb_maker(interaction: discord.Interaction,
 
     # Fetch the flag URL based on category and country
     shadow_url = SHADOW_ONOFF.get(shadow.value, None)
+    if isinstance(shadow_url, dict):
+        shadow_url = shadow_url.get(shadow.value, None) 
     flag_url = CATEGORY_FLAGS[category.value].get(country)
     if not flag_url:
         await interaction.response.send_message("指定された国や地域の旗画像が見つかりませんでした", ephemeral=True)
@@ -824,6 +826,8 @@ async def pb_maker(interaction: discord.Interaction,
 
     # Fetch the flag URL based on category and country
     shadow_url = SHADOW_ONOFF.get(shadow.value, None)
+    if isinstance(shadow_url, dict):
+        shadow_url = shadow_url.get(shadow.value, None) 
     flag_url = CATEGORY_FLAGS[category.value].get(country)
     if not flag_url:
         await interaction.response.send_message("指定された国や地域の旗画像が見つかりませんでした", ephemeral=True)
@@ -876,6 +880,8 @@ async def pb_maker(interaction: discord.Interaction,
 
     # Fetch the flag URL based on category and country
     shadow_url = SHADOW_ONOFF.get(shadow.value, None)
+    if isinstance(shadow_url, dict):
+        shadow_url = shadow_url.get(shadow.value, None) 
     flag_url = CATEGORY_FLAGS[category.value].get(country)
     if not flag_url:
         await interaction.response.send_message("指定された国や地域の旗画像が見つかりませんでした", ephemeral=True)
