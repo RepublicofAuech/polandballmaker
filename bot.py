@@ -700,9 +700,6 @@ async def fetch_image(url):
 
 # Function to merge the flag and expression images with more offset for each predefined position
 def merge_images(shadow_img, flag_img, expression_img, position):
-
-    if shadow_img:
-        combined_img.paste(shadow_img, (0, 0), shadow_img)
         
     if expression_img is None:
         print("No expression image provided.")
@@ -737,6 +734,8 @@ def merge_images(shadow_img, flag_img, expression_img, position):
                          2, (flag_img.height - expression_img.height) // 2))
 
     # Merge the expression onto the flag image
+    if shadow_img:
+        combined_img.paste(shadow_img, (0, 0), shadow_img)
     combined_img = flag_img.copy()
     combined_img.paste(expression_img, (x, y), expression_img)
 
