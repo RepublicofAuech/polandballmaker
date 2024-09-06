@@ -771,7 +771,7 @@ async def pb_maker(interaction: discord.Interaction,
     await interaction.response.defer()
 
     # Fetch the flag URL based on category and country
-    shadow_url = WITHSHADOW.get(shadow.value, None)
+    shadow_url = SHADOW_ONOFF.get(shadow.value)  # Fetch shadow URL based on user's choice
     flag_url = CATEGORY_FLAGS[category.value].get(country)
     if not flag_url:
         await interaction.response.send_message("指定された国や地域の旗画像が見つかりませんでした", ephemeral=True)
@@ -781,7 +781,7 @@ async def pb_maker(interaction: discord.Interaction,
     expression_url = EXPRESSION_IMAGES.get(expression.value, None)
     
     # Fetch the images
-    shadow_img = await fetch_image(shadow_url)
+    shadow_img = await fetch_image(shadow_url) if shadow_url else None  # Fetch shadow image only if URL is valid
     flag_img = await fetch_image(flag_url)
     expression_img = await fetch_image(expression_url) if expression_url else None
     
@@ -802,7 +802,7 @@ async def pb_maker(interaction: discord.Interaction,
         output.seek(0)
         file = discord.File(output, filename='polandball.png')
         await interaction.followup.send(file=file)
-
+        
 @bot.tree.command(name='pbmaker_world', description='世界の国、組織などのポーランドボールを作成します')
 @app_commands.describe(
     shadow='影の有無を選択してください',
@@ -823,7 +823,7 @@ async def pb_maker(interaction: discord.Interaction,
     await interaction.response.defer()
 
     # Fetch the flag URL based on category and country
-    shadow_url = WITHSHADOW.get(shadow.value, None)
+    shadow_url = SHADOW_ONOFF.get(shadow.value, None)
     if isinstance(shadow_url, dict):
         shadow_url = shadow_url.get(shadow.value, None) 
     flag_url = CATEGORY_FLAGS[category.value].get(country)
@@ -877,7 +877,7 @@ async def pb_maker(interaction: discord.Interaction,
     await interaction.response.defer()
 
     # Fetch the flag URL based on category and country
-    shadow_url = WITHSHADOW.get(shadow.value, None)
+    shadow_url = SHADOW_ONOFF.get(shadow.value)  # Fetch shadow URL based on user's choice
     flag_url = CATEGORY_FLAGS[category.value].get(country)
     if not flag_url:
         await interaction.response.send_message("指定された国や地域の旗画像が見つかりませんでした", ephemeral=True)
@@ -887,7 +887,7 @@ async def pb_maker(interaction: discord.Interaction,
     expression_url = EXPRESSION_IMAGES.get(expression.value, None)
     
     # Fetch the images
-    shadow_img = await fetch_image(shadow_url)
+    shadow_img = await fetch_image(shadow_url) if shadow_url else None  # Fetch shadow image only if URL is valid
     flag_img = await fetch_image(flag_url)
     expression_img = await fetch_image(expression_url) if expression_url else None
     
@@ -908,6 +908,6 @@ async def pb_maker(interaction: discord.Interaction,
         output.seek(0)
         file = discord.File(output, filename='polandball.png')
         await interaction.followup.send(file=file)
-
+        
 load_dotenv()
 bot.run(os.getenv("TOKEN"))
