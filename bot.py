@@ -568,7 +568,7 @@ POSITION_COMMANDS = {
     '左上': '目の位置は左上に設定されました。',
 }
 
-WITHSHADOW = {
+SHADOW_ONOFF = {
     'あり': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/shadowpbmaker.png?raw=true',
     'なし': None
 }    
@@ -601,11 +601,6 @@ CATEGORY_FLAGS = {
     'その他の都市（中国から九州）': OTHER_CITY_CHUTOKYU,
     '昔あった国': OLDCOUNTRY,
     'その他': OTHERS,
-    'なし': NONE
-}
-
-SHADOW_ONOFF = {
-    'あり': WITHSHADOW,
     'なし': NONE
 }
 
