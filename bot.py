@@ -569,7 +569,8 @@ POSITION_COMMANDS = {
 }
 
 WITHSHADOW = {
-    'あり': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/shadowpbmaker.png?raw=true'
+    'あり': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/shadowpbmaker.png?raw=true',
+    'なし': None
 }    
 
 CATEGORY_FLAGS = {
@@ -706,10 +707,8 @@ async def fetch_image(url):
 
 
 def merge_images(shadow_img, flag_img, expression_img, position):
-
     if expression_img is None:
         print("No expression image provided.")
-        # Optionally, you can handle this case differently, such as using a default image or skipping this step
         return flag_img
 
     # Convert expression_img to RGBA if not already
@@ -717,10 +716,8 @@ def merge_images(shadow_img, flag_img, expression_img, position):
         expression_img = expression_img.convert('RGBA')
 
     # Resize the expression image to 100% of the flag's size
-    new_width = int(flag_img.width * 1)
-    new_height = int(flag_img.height * 1)
     expression_img = expression_img.resize(
-        (new_width, new_height), Image.LANCZOS)
+        (flag_img.width, flag_img.height), Image.LANCZOS)
 
     # Define offset values for more exaggerated positions
     offset_x, offset_y = 120, 120  # Adjust these values for more or less offset
@@ -746,6 +743,7 @@ def merge_images(shadow_img, flag_img, expression_img, position):
     combined_img = flag_img.copy()
     combined_img.paste(expression_img, (x, y), expression_img)
 
+    # If shadow is present, merge it onto the combined image
     if shadow_img:
         combined_img.paste(shadow_img, (0, 0), shadow_img)
 
