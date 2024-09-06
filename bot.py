@@ -746,6 +746,9 @@ def merge_images(shadow_img, flag_img, expression_img, position):
     combined_img = flag_img.copy()
     combined_img.paste(expression_img, (x, y), expression_img)
 
+    if shadow_img:
+        combined_img.paste(shadow_img, (0, 0), shadow_img)
+
     return combined_img
 
 # Command to create the Polandball image
