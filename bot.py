@@ -568,6 +568,10 @@ POSITION_COMMANDS = {
     '左上': '目の位置は左上に設定されました。',
 }
 
+WITHSHADOW = {
+    'あり': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/shadowpbmaker.png?raw=true'
+}    
+
 CATEGORY_FLAGS = {
     '西・南ヨーロッパの国々': WSEUROPE_COUNTRY,
     '東・北ヨーロッパの国々': ENEUROPE_COUNTRY,
@@ -596,6 +600,11 @@ CATEGORY_FLAGS = {
     'その他の都市（中国から九州）': OTHER_CITY_CHUTOKYU,
     '昔あった国': OLDCOUNTRY,
     'その他': OTHERS,
+    'なし': NONE
+}
+
+SHADOW_ONOFF = {
+    'あり': WITHSHADOW,
     'なし': NONE
 }
 
@@ -663,6 +672,11 @@ EXPRESSION_CHOICES = [
     app_commands.Choice(name='なし', value='なし')
 ]
 
+SHADOW_CHOICES = [
+    app_commands.Choice(name='あり', value='あり'),
+    app_commands.Choice(name='なし', value='なし')
+]
+
 POSITION_CHOICES = [app_commands.Choice(
     name=pos, value=pos) for pos in POSITION_COMMANDS.keys()]
 
@@ -688,7 +702,8 @@ async def fetch_image(url):
 # Function to merge the flag and expression images with more offset for each predefined position
 
 
-def merge_images(flag_img, expression_img, position):
+def merge_images(shadow_img, flag_img, expression_img, position):
+
     if expression_img is None:
         print("No expression image provided.")
         # Optionally, you can handle this case differently, such as using a default image or skipping this step
@@ -735,14 +750,16 @@ def merge_images(flag_img, expression_img, position):
 
 @bot.tree.command(name='pbmaker_japan', description='日本の都市などのポーランドボールを作成します')
 @app_commands.describe(
+    shadow='影の有無を選択してください',
     category='柄のカテゴリーを選んでください',
     country='国、都道府県または市区町村を選んでください',
     expression='ボールの表情を選んでください',
     position='目の位置を選んでください'
 )
-@app_commands.choices(category=JAPAN_CHOICES, expression=EXPRESSION_CHOICES, position=POSITION_CHOICES)
+@app_commands.choices(shadow=SHADOW_CHOICES, category=JAPAN_CHOICES, expression=EXPRESSION_CHOICES, position=POSITION_CHOICES)
 @app_commands.autocomplete(country=get_country_choices)
 async def pb_maker(interaction: discord.Interaction,
+                   shadow: app_commands.Choice[str],
                    category: app_commands.Choice[str],
                    country: str,
                    expression: app_commands.Choice[str],
@@ -751,6 +768,7 @@ async def pb_maker(interaction: discord.Interaction,
     await interaction.response.defer()
 
     # Fetch the flag URL based on category and country
+    shadow_url = SHADOW_ONOFF.get(shadow.value, None)
     flag_url = CATEGORY_FLAGS[category.value].get(country)
     if not flag_url:
         await interaction.response.send_message("指定された国や地域の旗画像が見つかりませんでした", ephemeral=True)
@@ -760,6 +778,7 @@ async def pb_maker(interaction: discord.Interaction,
     expression_url = EXPRESSION_IMAGES.get(expression.value, None)
     
     # Fetch the images
+    shadow_img = await fetch_image(shadow_url)
     flag_img = await fetch_image(flag_url)
     expression_img = await fetch_image(expression_url) if expression_url else None
     
@@ -769,7 +788,7 @@ async def pb_maker(interaction: discord.Interaction,
 
     # Merge images based on position
     try:
-        combined_img = merge_images(flag_img, expression_img, position.value)
+        combined_img = merge_images(shadow_img, flag_img, expression_img, position.value)
     except Exception as e:
         await interaction.response.send_message(f"画像の合成中にエラーが発生しました: {e}", ephemeral=True)
         return
@@ -788,9 +807,10 @@ async def pb_maker(interaction: discord.Interaction,
     expression='ボールの表情を選んでください',
     position='目の位置を選んでください'
 )
-@app_commands.choices(category=WORLD_CHOICES, expression=EXPRESSION_CHOICES, position=POSITION_CHOICES)
+@app_commands.choices(shadow=SHADOW_CHOICES, category=WORLD_CHOICES, expression=EXPRESSION_CHOICES, position=POSITION_CHOICES)
 @app_commands.autocomplete(country=get_country_choices)
 async def pb_maker(interaction: discord.Interaction,
+                   shadow: app_commands.Choice[str],
                    category: app_commands.Choice[str],
                    country: str,
                    expression: app_commands.Choice[str],
@@ -799,6 +819,7 @@ async def pb_maker(interaction: discord.Interaction,
     await interaction.response.defer()
 
     # Fetch the flag URL based on category and country
+    shadow_url = SHADOW_ONOFF.get(shadow.value, None)
     flag_url = CATEGORY_FLAGS[category.value].get(country)
     if not flag_url:
         await interaction.response.send_message("指定された国や地域の旗画像が見つかりませんでした", ephemeral=True)
@@ -808,6 +829,7 @@ async def pb_maker(interaction: discord.Interaction,
     expression_url = EXPRESSION_IMAGES.get(expression.value, None)
     
     # Fetch the images
+    shadow_img = await fetch_image(shadow_url)
     flag_img = await fetch_image(flag_url)
     expression_img = await fetch_image(expression_url) if expression_url else None
     
@@ -817,7 +839,7 @@ async def pb_maker(interaction: discord.Interaction,
 
     # Merge images based on position
     try:
-        combined_img = merge_images(flag_img, expression_img, position.value)
+        combined_img = merge_images(shadow_img, flag_img, expression_img, position.value)
     except Exception as e:
         await interaction.response.send_message(f"画像の合成中にエラーが発生しました: {e}", ephemeral=True)
         return
@@ -836,9 +858,10 @@ async def pb_maker(interaction: discord.Interaction,
     expression='ボールの表情を選んでください',
     position='目の位置を選んでください'
 )
-@app_commands.choices(category=OTHER_CHOICES, expression=EXPRESSION_CHOICES, position=POSITION_CHOICES)
+@app_commands.choices(shadow=SHADOW_CHOICES, category=OTHER_CHOICES, expression=EXPRESSION_CHOICES, position=POSITION_CHOICES)
 @app_commands.autocomplete(country=get_country_choices)
 async def pb_maker(interaction: discord.Interaction,
+                   shadow: app_commands.Choice[str],
                    category: app_commands.Choice[str],
                    country: str,
                    expression: app_commands.Choice[str],
@@ -847,6 +870,7 @@ async def pb_maker(interaction: discord.Interaction,
     await interaction.response.defer()
 
     # Fetch the flag URL based on category and country
+    shadow_url = SHADOW_ONOFF.get(shadow.value, None)
     flag_url = CATEGORY_FLAGS[category.value].get(country)
     if not flag_url:
         await interaction.response.send_message("指定された国や地域の旗画像が見つかりませんでした", ephemeral=True)
@@ -856,6 +880,7 @@ async def pb_maker(interaction: discord.Interaction,
     expression_url = EXPRESSION_IMAGES.get(expression.value, None)
     
     # Fetch the images
+    shadow_img = await fetch_image(shadow_url)
     flag_img = await fetch_image(flag_url)
     expression_img = await fetch_image(expression_url) if expression_url else None
     
@@ -865,7 +890,7 @@ async def pb_maker(interaction: discord.Interaction,
 
     # Merge images based on position
     try:
-        combined_img = merge_images(flag_img, expression_img, position.value)
+        combined_img = merge_images(shadow_img, flag_img, expression_img, position.value)
     except Exception as e:
         await interaction.response.send_message(f"画像の合成中にエラーが発生しました: {e}", ephemeral=True)
         return
