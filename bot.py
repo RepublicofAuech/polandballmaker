@@ -769,7 +769,7 @@ async def pb_maker(interaction: discord.Interaction,
 
     flag_url = CATEGORY_FLAGS[category.value].get(country)
     if not flag_url:
-        await interaction.response.send_message("指定された国や地域の旗画像が見つかりませんでした", ephemeral=True)
+        await interaction.followup.send("指定された国や地域の旗画像が見つかりませんでした", ephemeral=True)
         return
 
     # Fetch the expression image URL or set to None if expression is 'なし'
@@ -781,14 +781,14 @@ async def pb_maker(interaction: discord.Interaction,
     expression_img = await fetch_image(expression_url) if expression_url else None
     
     if not flag_img:
-        await interaction.response.send_message("旗の画像を取得できませんでした。再試行してください", ephemeral=True)
+        await interaction.followup.send("旗の画像を取得できませんでした。再試行してください", ephemeral=True)
         return
 
     # Merge images based on position
     try:
         combined_img = merge_images(shadow_img, flag_img, expression_img, position.value)
     except Exception as e:
-        await interaction.response.send_message(f"画像の合成中にエラーが発生しました: {e}", ephemeral=True)
+        await interaction.followup.send(f"画像の合成中にエラーが発生しました: {e}", ephemeral=True)
         return
 
     # Save and send the image
@@ -823,7 +823,7 @@ async def pb_maker(interaction: discord.Interaction,
 
     flag_url = CATEGORY_FLAGS[category.value].get(country)
     if not flag_url:
-        await interaction.response.send_message("指定された国や地域の旗画像が見つかりませんでした", ephemeral=True)
+        await interaction.followup.send("指定された国や地域の旗画像が見つかりませんでした", ephemeral=True)
         return
 
     # Fetch the expression image URL or set to None if expression is 'なし'
@@ -842,7 +842,7 @@ async def pb_maker(interaction: discord.Interaction,
     try:
         combined_img = merge_images(shadow_img, flag_img, expression_img, position.value)
     except Exception as e:
-        await interaction.response.send_message(f"画像の合成中にエラーが発生しました: {e}", ephemeral=True)
+        await interaction.followup.send(f"画像の合成中にエラーが発生しました: {e}", ephemeral=True)
         return
 
     # Save and send the image
@@ -877,7 +877,7 @@ async def pb_maker(interaction: discord.Interaction,
 
     flag_url = CATEGORY_FLAGS[category.value].get(country)
     if not flag_url:
-        await interaction.response.send_message("指定された国や地域の旗画像が見つかりませんでした", ephemeral=True)
+        await interaction.followup.send("指定された国や地域の旗画像が見つかりませんでした", ephemeral=True)
         return
 
     # Fetch the expression image URL or set to None if expression is 'なし'
@@ -889,14 +889,14 @@ async def pb_maker(interaction: discord.Interaction,
     expression_img = await fetch_image(expression_url) if expression_url else None
     
     if not flag_img:
-        await interaction.response.send_message("旗の画像を取得できませんでした。再試行してください", ephemeral=True)
+        await interaction.followup.send("旗の画像を取得できませんでした。再試行してください", ephemeral=True)
         return
 
     # Merge images based on position
     try:
         combined_img = merge_images(shadow_img, flag_img, expression_img, position.value)
     except Exception as e:
-        await interaction.response.send_message(f"画像の合成中にエラーが発生しました: {e}", ephemeral=True)
+        await interaction.followup.send(f"画像の合成中にエラーが発生しました: {e}", ephemeral=True)
         return
 
     # Save and send the image
