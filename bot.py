@@ -433,6 +433,7 @@ TOKYO23WARDS = {
     '足立区': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/adachiballpbmaker.png?raw=true',
     '練馬区': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/nerimaballpbmaker.png?raw=true',
     '葛飾区': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/katsushikaballpbmaker.png?raw=true',
+    '荒川区': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/arakawaballpbmaker.png?raw=true',
     '江戸川区': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/edogawaballpbmaker.png?raw=true'
 }
 
@@ -468,6 +469,7 @@ OTHERS = {
     'AHNU反地理系支部': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/ahaneuantiballpbmaker.png?raw=true',
     'アドラフ民主主義共和国連邦': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/adorafuballpbmaker.png?raw=true',
     'ミネラル共和国': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/mineralballpbmaker.png?raw=true',
+    'サフォーニウ共和国': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/safoniuballpbmaker.png?raw=true',
     '吹奏楽部のイメージ旗': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/brassbandballpbmaker.png?raw=true',
 }
 
