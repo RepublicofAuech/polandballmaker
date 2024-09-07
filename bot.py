@@ -763,8 +763,8 @@ async def pb_maker(interaction: discord.Interaction,
                    category: app_commands.Choice[str],
                    country: str,
                    expression: app_commands.Choice[str],
-                   position: app_commands.Choice[str]):,
-                   shadow: app_commands.Choice[str],
+                   position: app_commands.Choice[str]),
+                   shadow: app_commands.Choice[str]:
 
     await interaction.response.defer()
 
@@ -817,8 +817,8 @@ async def pb_maker(interaction: discord.Interaction,
                    category: app_commands.Choice[str],
                    country: str,
                    expression: app_commands.Choice[str],
-                   position: app_commands.Choice[str]):,
-                   shadow: app_commands.Choice[str],
+                   position: app_commands.Choice[str]),
+                   shadow: app_commands.Choice[str]:
 
     await interaction.response.defer()
 
@@ -871,8 +871,8 @@ async def pb_maker(interaction: discord.Interaction,
                    category: app_commands.Choice[str],
                    country: str,
                    expression: app_commands.Choice[str],
-                   position: app_commands.Choice[str]):,
-                   shadow: app_commands.Choice[str],
+                   position: app_commands.Choice[str]),
+                   shadow: app_commands.Choice[str]:
 
     await interaction.response.defer()
 
