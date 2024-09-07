@@ -760,11 +760,11 @@ def merge_images(shadow_img, flag_img, expression_img, position):
 @app_commands.choices(category=JAPAN_CHOICES, expression=EXPRESSION_CHOICES, position=POSITION_CHOICES, shadow=SHADOW_CHOICES)
 @app_commands.autocomplete(country=get_country_choices)
 async def pb_maker(interaction: discord.Interaction,
-                   shadow: app_commands.Choice[str],
                    category: app_commands.Choice[str],
                    country: str,
                    expression: app_commands.Choice[str],
                    position: app_commands.Choice[str]):
+                   shadow: app_commands.Choice[str],
 
     await interaction.response.defer()
 
@@ -814,11 +814,11 @@ async def pb_maker(interaction: discord.Interaction,
 @app_commands.choices(category=WORLD_CHOICES, expression=EXPRESSION_CHOICES, position=POSITION_CHOICES, shadow=SHADOW_CHOICES)
 @app_commands.autocomplete(country=get_country_choices)
 async def pb_maker(interaction: discord.Interaction,
-                   shadow: app_commands.Choice[str],
                    category: app_commands.Choice[str],
                    country: str,
                    expression: app_commands.Choice[str],
                    position: app_commands.Choice[str]):
+                   shadow: app_commands.Choice[str],
 
     await interaction.response.defer()
 
@@ -867,12 +867,12 @@ async def pb_maker(interaction: discord.Interaction,
 )
 @app_commands.choices(category=OTHER_CHOICES, expression=EXPRESSION_CHOICES, position=POSITION_CHOICES, shadow=SHADOW_CHOICES)
 @app_commands.autocomplete(country=get_country_choices)
-async def pb_maker(interaction: discord.Interaction,
-                   shadow: app_commands.Choice[str],
+async def pb_maker(interaction: discord.Interaction,                  
                    category: app_commands.Choice[str],
                    country: str,
                    expression: app_commands.Choice[str],
                    position: app_commands.Choice[str]):
+                   shadow: app_commands.Choice[str],
 
     await interaction.response.defer()
 
