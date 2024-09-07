@@ -632,6 +632,7 @@ CATEGORY_FLAGS = {
     'その他の都市（中部から近畿）': OTHER_CITY_CHUTOKIN,
     'その他の都市（中国から九州）': OTHER_CITY_CHUTOKYU,
     '昔あった国': OLDCOUNTRY,
+    'その他': OTHERS,
     'なし': NONE
 }
 
