@@ -632,7 +632,6 @@ CATEGORY_FLAGS = {
     'その他の都市（中部から近畿）': OTHER_CITY_CHUTOKIN,
     'その他の都市（中国から九州）': OTHER_CITY_CHUTOKYU,
     '昔あった国': OLDCOUNTRY,
-    'その他': OTHERS,
     'なし': NONE
 }
 
@@ -652,7 +651,6 @@ WORLD_CHOICES = [
     app_commands.Choice(name='海外領土・自治領、未承認国家', value='海外領土・自治領、未承認国家'),
     app_commands.Choice(name='組織', value='組織'),
     app_commands.Choice(name='昔あった国', value='昔あった国'),
-    app_commands.Choice(name='その他', value='その他'),
     app_commands.Choice(name='なし', value='なし')
 ]
 
