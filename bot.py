@@ -649,8 +649,8 @@ CATEGORY_FLAGS = {
     '組織': ORGANIZATIONS,
     '東京23区': TOKYO23WARDS,
     '特例市': SPECIAL_CITY,
-    'その他の都市（北海道・東北）': OTHER_CITY_TOHOKU
-    'その他の都市（関東）': OTHER_CITY_KANTO
+    'その他の都市（北海道・東北）': OTHER_CITY_TOHOKU,
+    'その他の都市（関東）': OTHER_CITY_KANTO,
     'その他の都市（中部）': OTHER_CITY_CHUBU,
     'その他の都市（近畿）': OTHER_CITY_KINKI,
     'その他の都市（中国）': OTHER_CITY_CHUGOKU,
