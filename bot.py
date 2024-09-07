@@ -742,10 +742,10 @@ def merge_images(shadow_img, flag_img, expression_img, position):
 
     # If shadow image exists, calculate its position with a downward offset
     if shadow_img:
+        shadow_img = shadow_img.resize((flag_img.width, flag_img.height), Image.LANCZOS)
         shadow_offset_y = 10  # Move the shadow 10 pixels down; adjust this value as needed
         shadow_x = (flag_img.width - shadow_img.width) // 2  # Center the shadow horizontally
         shadow_y = (flag_img.height - shadow_img.height) // 2 + shadow_offset_y  # Center vertically and move down
-        shadow_img = shadow_img.resize((flag_img.width, flag_img.height), Image.LANCZOS)
         combined_img.paste(shadow_img, (shadow_x, shadow_y), shadow_img)
 
     # Paste the flag image on top of the shadow
