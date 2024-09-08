@@ -525,15 +525,24 @@ OTHER_CITY_KANTO = {
 }
 
 OTHER_CITY_CHUBU = {
+    '糸魚川市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/itoigawaballpbmaker.png?raw=true',
+    '射水市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/imizuballpbmaker.png?raw=true',
+    '敦賀市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/tsurugaballpbmaker.png?raw=true',
     '塩尻市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/shioziriballpbmaker.png?raw=true',
+    '韮崎市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/nirasakiballpbmaker.png?raw=true',
     '湖西市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/kosaiballpbmaker.png?raw=true',
     '三島市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/mishimaballpbmaker.png?raw=true',
     '東海市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/tokaiballpbmaker.png?raw=true',
     '安城市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/anjoballpbmaker.png?raw=true',
     '刈谷市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/kariyaballpbmaker.png?raw=true',
     '小牧市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/komakiballpbmaker.png?raw=true',
-    '大垣市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/ogakiballpbmaker.png?raw=true',
+    '豊川市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/toyokawaballpbmaker.png?raw=true',
     '蒲郡市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/gamagoriballpbmaker.png?raw=true',
+    '弥富市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/yatomiballpbmaker.png?raw=true',
+    '磐田市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/iwataballpbmaker.png?raw=true',
+    '羽島市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/hashimaballpbmaker.png?raw=true',
+    '大垣市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/ogakiballpbmaker.png?raw=true',
+    '高山市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/takayamaballpbmaker.png?raw=true',
 }
 
 OTHER_CITY_KINKI = {
