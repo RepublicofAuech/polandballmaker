@@ -522,6 +522,16 @@ OTHER_CITY_KANTO = {
     '立川市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/tachikawaballpbmaker.png?raw=true',
     '武蔵野市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/musashinoballpbmaker.png?raw=true',
     '国分寺市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/kokubunjiballpbmaker.png?raw=true',
+    '桐生市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/kiryuballpbmaker.png?raw=true',
+    'みどり市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/midoriballpbmaker.png?raw=true',
+    '安中市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/annakaballpbmaker.png?raw=true',
+    '小山市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/oyamaballpbmaker.png?raw=true',
+    '日立市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/hitachiballpbmaker.png?raw=true',
+    '栃木市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/tochigicityballpbmaker.png?raw=true',
+    '流山市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/nagareyamaballpbmaker.png?raw=true',
+    '逗子市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/zushiballpbmaker.png?raw=true',
+    '土浦市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/tsuchiuraballpbmaker.png?raw=true',
+    '鎌倉市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/kamakuraballpbmaker.png?raw=true',
 }
 
 OTHER_CITY_CHUBU = {
@@ -573,7 +583,7 @@ OTHER_CITY_KINKI = {
     '長岡京市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/nagaokakyoballpbmaker.png?raw=true',
 }
 
-OTHER_CITY_CHUGOKU = {
+OTHER_CITY_CHUSHI = {
     '山口市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/yamaguchicityballpbmaker.png?raw=true',
     '米子市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/yonagoballpbmaker.png?raw=true',
     '境港市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/sakaiminatoballpbmaker.png?raw=true',
@@ -584,9 +594,6 @@ OTHER_CITY_CHUGOKU = {
     '笠岡市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/kasaokaballpbmaker.png?raw=true',
     '長門市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/nagatoballpbmaker.png?raw=true',
     '防府市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/hofuballpbmaker.png?raw=true',
-}
-
-OTHER_CITY_SHIKOKU = {
     '徳島市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/tokushimacityballpbmaker.png?raw=true',
     '南国市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/nangokuballpbmaker.png?raw=true',
     'さぬき市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/sanukiballpbmaker.png?raw=true',
@@ -672,8 +679,7 @@ CATEGORY_FLAGS = {
     'その他の都市（関東）': OTHER_CITY_KANTO,
     'その他の都市（中部）': OTHER_CITY_CHUBU,
     'その他の都市（近畿）': OTHER_CITY_KINKI,
-    'その他の都市（中国）': OTHER_CITY_CHUGOKU,
-    'その他の都市（四国）': OTHER_CITY_SHIKOKU,
+    'その他の都市（中四国）': OTHER_CITY_CHUSHI,
     'その他の都市（九州）': OTHER_CITY_KYUSHU,
     '昔あった国': OLDCOUNTRY,
     'その他': OTHERS,
@@ -712,8 +718,7 @@ JAPAN_CHOICES = [
     app_commands.Choice(name='その他の都市（関東）', value='その他の都市（関東）'),
     app_commands.Choice(name='その他の都市（中部）', value='その他の都市（中部）'),
     app_commands.Choice(name='その他の都市（近畿）', value='その他の都市（近畿）'),
-    app_commands.Choice(name='その他の都市（中国）', value='その他の都市（中国）'),
-    app_commands.Choice(name='その他の都市（四国）', value='その他の都市（四国）'),
+    app_commands.Choice(name='その他の都市（中四国）', value='その他の都市（中四国）'),
     app_commands.Choice(name='その他の都市（九州）', value='その他の都市（九州）'),
     app_commands.Choice(name='なし', value='なし')
 ]
