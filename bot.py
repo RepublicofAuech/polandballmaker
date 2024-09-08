@@ -607,7 +607,16 @@ OTHER_CITY_CHUSHI = {
     '徳島市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/tokushimacityballpbmaker.png?raw=true',
     '南国市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/nangokuballpbmaker.png?raw=true',
     'さぬき市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/sanukiballpbmaker.png?raw=true',
-    '今治市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/imabariballpbmaker.png?raw=true',
+    '倉吉市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/kurayoshiballpbmaker.png?raw=true',
+    '浜田市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/hamadaballpbmaker.png?raw=true',
+    '益田市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/masudaballpbmaker.png?raw=true',
+    '周南市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/shunanballpbmaker.png?raw=true',
+    '宇部市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/ubeballpbmaker.png?raw=true',
+    '津山市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/tsuyamaballpbmaker.png?raw=true',
+    '尾道市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/onomichicityballpbmaker.png?raw=true',
+    '阿南市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/ananballpbmaker.png?raw=true',
+    '丸亀市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/marukameballpbmaker.png?raw=true',
+    '新居浜市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/niihamaballpbmaker.png?raw=true',
 }
 
 OTHER_CITY_KYUSHU = {
