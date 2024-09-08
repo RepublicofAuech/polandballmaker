@@ -467,6 +467,7 @@ OTHERS = {
     'アウイック共和国': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/auechballpbmaker.png?raw=true',
     'フォノッサ共和国': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/fonossaballpbmaker.png?raw=true',
     'アハネウ民主共和国': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/ahaneuballpbmaker.png?raw=true',
+    'アーカント・ハッセ共和国': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/erkundhasseballpbmaker.png?raw=true',
     'AHNU反地理系支部': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/ahaneuantiballpbmaker.png?raw=true',
     'アドラフ民主主義共和国連邦': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/adorafuballpbmaker.png?raw=true',
     'ミネラル共和国': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/mineralballpbmaker.png?raw=true',
