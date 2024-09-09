@@ -16,7 +16,13 @@ async def on_ready():
     print(f'Logged in as {bot.user}!')
 
 # Dictionaries to map inputs to corresponding images
+ACCESSORIES_IMAGES = {
+    '剣': "https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/swordpbmaker.png?raw=true",
+}
 
+ACCESSORIES_CHOICES = [
+    app_commands.Choice(name='剣', value='剣')
+]
 
 ENEUROPE_COUNTRY = {
     'ポーランド': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/polandballpbmaker1.png?raw=true',
@@ -823,7 +829,7 @@ async def fetch_image(url):
                 return None
 
 # Function to merge the flag and expression images with more offset for each predefined position
-def merge_images(shadow_img, flag_img, expression_img, accessories_img, position):
+def merge_images(shadow_img, flag_img, expression_img, position):
     # Convert expression_img to RGBA if not already
     if expression_img and expression_img.mode != 'RGBA':
         expression_img = expression_img.convert('RGBA')
@@ -869,10 +875,6 @@ def merge_images(shadow_img, flag_img, expression_img, accessories_img, position
     if expression_img:
         combined_img.paste(expression_img, (x, y), expression_img)
 
-    if accessories_img:
-        accessories_img = accessories_img.resize((flag_img.width, flag_img.height), Image.LANCZOS)
-        combined_img.paste(accessories_img, (x, y), accessories_img)
-
     return combined_img
 
 # Command to create the Polandball image
@@ -884,23 +886,21 @@ def merge_images(shadow_img, flag_img, expression_img, accessories_img, position
     country='国、都道府県または市区町村を選んでください',
     expression='ボールの表情を選んでください',
     position='目の位置を選んでください',
-    shadow='影の有無を選択してください'
+    shadow='影の有無を選んでください'
 )
-@app_commands.choices(category=JAPAN_CHOICES, expression=EXPRESSION_CHOICES, position=POSITION_CHOICES, shadow=SHADOW_CHOICES, accessories=ACCESSORIES_CHOICES)
+@app_commands.choices(category=JAPAN_CHOICES, expression=EXPRESSION_CHOICES, position=POSITION_CHOICES, shadow=SHADOW_CHOICES)
 @app_commands.autocomplete(country=get_country_choices)
 async def pb_maker(interaction: discord.Interaction,                  
                    category: app_commands.Choice[str],
                    country: str,
                    expression: app_commands.Choice[str],
                    position: app_commands.Choice[str],
-                   shadow: app_commands.Choice[str],
-                   accessories: app_commands.Choice[str]):
+                   shadow: app_commands.Choice[str]):
 
     await interaction.response.defer()
 
     # Correctly fetch the URL or None based on the shadow selection
     shadow_url = SHADOW_ONOFF.get(shadow.value)
-    accessories_url = ACCESSORIES_OPTION.get(accessories.value, None)
 
     flag_url = CATEGORY_FLAGS[category.value].get(country)
     if not flag_url:
@@ -914,7 +914,6 @@ async def pb_maker(interaction: discord.Interaction,
     shadow_img = await fetch_image(shadow_url) if shadow_url else None  # Fetch shadow image only if URL is valid
     flag_img = await fetch_image(flag_url)
     expression_img = await fetch_image(expression_url) if expression_url else None
-    accessories_img = await fetch_image(accessories_url) if accessories_url else None
     
     if not flag_img:
         await interaction.followup.send("旗の画像を取得できませんでした。再試行してください", ephemeral=True)
@@ -922,7 +921,7 @@ async def pb_maker(interaction: discord.Interaction,
 
     # Merge images based on position
     try:
-        combined_img = merge_images(shadow_img, flag_img, expression_img, accessories_img, position.value)
+        combined_img = merge_images(shadow_img, flag_img, expression_img, position.value)
     except Exception as e:
         await interaction.followup.send(f"画像の合成中にエラーが発生しました: {e}", ephemeral=True)
         return
@@ -940,23 +939,21 @@ async def pb_maker(interaction: discord.Interaction,
     country='国、都道府県または市区町村を選んでください',
     expression='ボールの表情を選んでください',
     position='目の位置を選んでください',
-    shadow='影の有無を選択してください'
+    shadow='影の有無を選んでください'
 )
-@app_commands.choices(category=WORLD_CHOICES, expression=EXPRESSION_CHOICES, position=POSITION_CHOICES, shadow=SHADOW_CHOICES, accessories=ACCESSORIES_CHOICES)
+@app_commands.choices(category=WORLD_CHOICES, expression=EXPRESSION_CHOICES, position=POSITION_CHOICES, shadow=SHADOW_CHOICES)
 @app_commands.autocomplete(country=get_country_choices)
 async def pb_maker(interaction: discord.Interaction,                  
                    category: app_commands.Choice[str],
                    country: str,
                    expression: app_commands.Choice[str],
                    position: app_commands.Choice[str],
-                   shadow: app_commands.Choice[str],
-                   accessories: app_commands.Choice[str]):
+                   shadow: app_commands.Choice[str]):
 
     await interaction.response.defer()
 
     # Correctly fetch the URL or None based on the shadow selection
     shadow_url = SHADOW_ONOFF.get(shadow.value)
-    accessories_url = ACCESSORIES_OPTION.get(accessories.value, None)
 
     flag_url = CATEGORY_FLAGS[category.value].get(country)
     if not flag_url:
@@ -970,7 +967,6 @@ async def pb_maker(interaction: discord.Interaction,
     shadow_img = await fetch_image(shadow_url) if shadow_url else None  # Fetch shadow image only if URL is valid
     flag_img = await fetch_image(flag_url)
     expression_img = await fetch_image(expression_url) if expression_url else None
-    accessories_img = await fetch_image(accessories_url) if accessories_url else None
     
     if not flag_img:
         await interaction.response.send_message("旗の画像を取得できませんでした。再試行してください", ephemeral=True)
@@ -978,7 +974,7 @@ async def pb_maker(interaction: discord.Interaction,
 
     # Merge images based on position
     try:
-        combined_img = merge_images(shadow_img, flag_img, expression_img, accessories_img, position.value)
+        combined_img = merge_images(shadow_img, flag_img, expression_img, position.value)
     except Exception as e:
         await interaction.followup.send(f"画像の合成中にエラーが発生しました: {e}", ephemeral=True)
         return
@@ -996,23 +992,21 @@ async def pb_maker(interaction: discord.Interaction,
     country='国、都道府県または市区町村を選んでください',
     expression='ボールの表情を選んでください',
     position='目の位置を選んでください',
-    shadow='影の有無を選択してください'
+    shadow='影の有無を選んでください'
 )
-@app_commands.choices(category=OTHER_CHOICES, expression=EXPRESSION_CHOICES, position=POSITION_CHOICES, shadow=SHADOW_CHOICES, accessories=ACCESSORIES_CHOICES)
+@app_commands.choices(category=OTHER_CHOICES, expression=EXPRESSION_CHOICES, position=POSITION_CHOICES, shadow=SHADOW_CHOICES)
 @app_commands.autocomplete(country=get_country_choices)
 async def pb_maker(interaction: discord.Interaction,                  
                    category: app_commands.Choice[str],
                    country: str,
                    expression: app_commands.Choice[str],
                    position: app_commands.Choice[str],
-                   shadow: app_commands.Choice[str],
-                   accessories: app_commands.Choice[str]):
+                   shadow: app_commands.Choice[str]):
 
     await interaction.response.defer()
 
     # Correctly fetch the URL or None based on the shadow selection
     shadow_url = SHADOW_ONOFF.get(shadow.value)
-    accessories_url = ACCESSORIES_OPTION.get(accessories.value, None)
 
     flag_url = CATEGORY_FLAGS[category.value].get(country)
     if not flag_url:
@@ -1026,7 +1020,6 @@ async def pb_maker(interaction: discord.Interaction,
     shadow_img = await fetch_image(shadow_url) if shadow_url else None  # Fetch shadow image only if URL is valid
     flag_img = await fetch_image(flag_url)
     expression_img = await fetch_image(expression_url) if expression_url else None
-    accessories_img = await fetch_image(accessories_url) if accessories_url else None
     
     if not flag_img:
         await interaction.followup.send("旗の画像を取得できませんでした。再試行してください", ephemeral=True)
@@ -1034,7 +1027,7 @@ async def pb_maker(interaction: discord.Interaction,
 
     # Merge images based on position
     try:
-        combined_img = merge_images(shadow_img, flag_img, expression_img, accessories_img, position.value)
+        combined_img = merge_images(shadow_img, flag_img, expression_img, position.value)
     except Exception as e:
         await interaction.followup.send(f"画像の合成中にエラーが発生しました: {e}", ephemeral=True)
         return
@@ -1045,6 +1038,43 @@ async def pb_maker(interaction: discord.Interaction,
         output.seek(0)
         file = discord.File(output, filename='polandball.png')
         await interaction.followup.send(file=file)
+
+@bot.tree.command(name='accessories', description='ポーランドボールの画像を入れて飾りみたいなのをつけます')
+@app_commands.describe(
+    image='ここにPBメーカーのボールの画像を入れてください',
+    name='つける飾りを選んでください'
+)
+@app_commands.choices(name=ACCESSORIES_CHOICES)
+async def merge(interaction: discord.Interaction, image: discord.Attachment, name: app_commands.Choice[str]):
+    if name.value not in ACCESSORIES_IMAGES:
+        await interaction.response.send_message("選択された飾りを見つけることができませんでした", ephemeral=True)
+        return
+
+    # Check if the uploaded file is an image
+    if not image.content_type.startswith("image/"):
+        await interaction.response.send_message("画像ファイルが見つかりませんでした", ephemeral=True)
+        return
+
+    # Fetch the uploaded image from Discord
+    image_data = await image.read()
+    uploaded_image = Image.open(io.BytesIO(image_data)).convert("RGBA")
+
+    # Fetch the predefined image from the URL
+    predefined_image_url = ACCESSORIES_IMAGES[name.value]
+    response = requests.get(predefined_image_url)
+    predefined_image = Image.open(io.BytesIO(response.content)).convert("RGBA")
+
+    # Resize the predefined image to fit on top of the uploaded image (adjust as needed)
+    predefined_image = predefined_image.resize((uploaded_image.width, uploaded_image.height), Image.LANCZOS)
+
+    # Merge images (overlay predefined image on top of the uploaded image)
+    merged_image = Image.alpha_composite(uploaded_image, predefined_image)
+
+    # Save the merged image to a bytes buffer
+    with io.BytesIO() as image_binary:
+        merged_image.save(image_binary, 'PNG')
+        image_binary.seek(0)
+        await interaction.response.send_message(file=discord.File(fp=image_binary, filename='accessoriespb.png'))
         
 load_dotenv()
 bot.run(os.getenv("TOKEN"))
