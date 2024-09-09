@@ -1069,8 +1069,18 @@ async def merge(interaction: discord.Interaction, image: discord.Attachment, nam
     # Resize the predefined image to fit on top of the uploaded image (adjust as needed)
     predefined_image = predefined_image.resize((uploaded_image.width, uploaded_image.height), Image.LANCZOS)
 
-    # Merge images (overlay predefined image on top of the uploaded image)
-    merged_image = Image.alpha_composite(uploaded_image, predefined_image)
+    Y_OFFSET = 25  # Example: move 50 pixels down
+    x_offset = 0
+    y_offset = Y_OFFSET
+
+    # Create a blank canvas with the same size as the uploaded image
+    merged_image = Image.new("RGBA", uploaded_image.size)
+    
+    # Paste the uploaded image onto the canvas
+    merged_image.paste(uploaded_image, (0, 0))
+    
+    # Paste the predefined image with the specified offset
+    merged_image.paste(predefined_image, (x_offset, y_offset), predefined_image)
 
     # Save the merged image to a bytes buffer
     with io.BytesIO() as image_binary:
