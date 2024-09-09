@@ -1048,12 +1048,13 @@ async def pb_maker(interaction: discord.Interaction,
 @app_commands.choices(name=ACCESSORIES_CHOICES)
 async def merge(interaction: discord.Interaction, image: discord.Attachment, name: app_commands.Choice[str]):
     if name.value not in ACCESSORIES_IMAGES:
-        await interaction.response.send_message("選択された飾りを見つけることができませんでした", ephemeral=True)
+        await interaction.followup.send("選択された飾りを見つけることができませんでした", ephemeral=True)
         return
 
+    await interaction.response.defer()
     # Check if the uploaded file is an image
     if not image.content_type.startswith("image/"):
-        await interaction.response.send_message("画像ファイルが見つかりませんでした", ephemeral=True)
+        await interaction.followup.send("画像ファイルが見つかりませんでした", ephemeral=True)
         return
 
     # Fetch the uploaded image from Discord
@@ -1075,7 +1076,7 @@ async def merge(interaction: discord.Interaction, image: discord.Attachment, nam
     with io.BytesIO() as image_binary:
         merged_image.save(image_binary, 'PNG')
         image_binary.seek(0)
-        await interaction.response.send_message(file=discord.File(fp=image_binary, filename='accessoriespb.png'))
+        await interaction.followup.send(file=discord.File(fp=image_binary, filename='accessoriespb.png'))
         
 load_dotenv()
 bot.run(os.getenv("TOKEN"))
