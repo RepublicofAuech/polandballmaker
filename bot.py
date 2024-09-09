@@ -1069,7 +1069,7 @@ async def merge(interaction: discord.Interaction, image: discord.Attachment, nam
     # Resize the predefined image to fit on top of the uploaded image (adjust as needed)
     predefined_image = predefined_image.resize((uploaded_image.width, uploaded_image.height), Image.LANCZOS)
 
-    Y_OFFSET = 25  # Example: move 50 pixels down
+    Y_OFFSET = 50  # Example: move 50 pixels down
     x_offset = 0
     y_offset = Y_OFFSET
 
