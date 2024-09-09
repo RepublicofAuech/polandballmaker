@@ -4,6 +4,7 @@ from discord.ext import commands
 import aiohttp
 import io
 import os
+import requests
 from PIL import Image
 from dotenv import load_dotenv
 
