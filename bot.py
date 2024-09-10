@@ -19,7 +19,13 @@ async def on_ready():
 # Dictionaries to map inputs to corresponding images
 ACCESSORIES_IMAGES = {
     '剣': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/swordpbmaker.png?raw=true',
+    '銃': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/ak47.png?raw=true',
     'ブーメラン': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/boomerangpbmaker.png?raw=true',
+    'バトン': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/baton.png?raw=true',
+    'Wiiリモコン': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/wiiremote.png?raw=true',
+    '寿司': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/sushi.png?raw=true',
+    '緑茶': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/greentea.png?raw=true',
+    'ボタン': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/redbutton.png?raw=true',
     'サイリウム(左側のみ)': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/lightstick.png?raw=true',
     'サイリウム(右側のみ)': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/lightstickred.png?raw=true',
     'サイリウム(両側)': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/lightstickboth.png?raw=true',
@@ -27,7 +33,13 @@ ACCESSORIES_IMAGES = {
 
 ACCESSORIES_CHOICES = [
     app_commands.Choice(name='剣', value='剣'),
+    app_commands.Choice(name='銃', value='銃'),
     app_commands.Choice(name='ブーメラン', value='ブーメラン'),
+    app_commands.Choice(name='バトン', value='バトン'),
+    app_commands.Choice(name='Wiiリモコン', value='Wiiリモコン'),
+    app_commands.Choice(name='寿司', value='寿司'),
+    app_commands.Choice(name='緑茶', value='緑茶'),
+    app_commands.Choice(name='ボタン', value='ボタン'),
     app_commands.Choice(name='サイリウム(左側のみ)', value='サイリウム(左側のみ)'),
     app_commands.Choice(name='サイリウム(右側のみ)', value='サイリウム(右側のみ)'),
     app_commands.Choice(name='サイリウム(両側)', value='サイリウム(両側)'),
