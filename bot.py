@@ -25,7 +25,8 @@ ACCESSORIES_IMAGES = {
 
 ACCESSORIES_CHOICES = [
     app_commands.Choice(name='剣', value='剣'),
-    app_commands.Choice(name='ブーメラン', value='ブーメラン')
+    app_commands.Choice(name='ブーメラン', value='ブーメラン'),
+    app_commands.Choice(name='サイリウム', value='サイリウム')
 ]
 
 ENEUROPE_COUNTRY = {
