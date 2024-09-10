@@ -18,8 +18,9 @@ async def on_ready():
 
 # Dictionaries to map inputs to corresponding images
 ACCESSORIES_IMAGES = {
-    '剣': "https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/swordpbmaker.png?raw=true",
-    'ブーメラン': "https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/boomerangpbmaker.png?raw=true",
+    '剣': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/swordpbmaker.png?raw=true',
+    'ブーメラン': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/boomerangpbmaker.png?raw=true',
+    'サイリウム': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/lightstick.png?raw=true'
 }
 
 ACCESSORIES_CHOICES = [
