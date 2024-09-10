@@ -791,11 +791,6 @@ EXPRESSION_CHOICES = [
     app_commands.Choice(name='なし', value='なし')
 ]
 
-ACCESSORIES_CHOICES = [
-    app_commands.Choice(name='剣', value='剣'),
-    app_commands.Choice(name='なし', value='なし')
-]
-
 SHADOW_CHOICES = [
     app_commands.Choice(name='あり', value='あり'),
     app_commands.Choice(name='なし', value='なし')
