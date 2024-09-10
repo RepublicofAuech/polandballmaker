@@ -19,10 +19,12 @@ async def on_ready():
 # Dictionaries to map inputs to corresponding images
 ACCESSORIES_IMAGES = {
     '剣': "https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/swordpbmaker.png?raw=true",
+    'ブーメラン': "https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/boomerangpbmaker.png?raw=true",
 }
 
 ACCESSORIES_CHOICES = [
-    app_commands.Choice(name='剣', value='剣')
+    app_commands.Choice(name='剣', value='剣'),
+    app_commands.Choice(name='ブーメラン', value='ブーメラン')
 ]
 
 ENEUROPE_COUNTRY = {
