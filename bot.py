@@ -686,11 +686,6 @@ POSITION_COMMANDS = {
     '左上': '目の位置は左上に設定されました。',
 }
 
-ACCESSORIES_OPTION = {
-    '剣': "https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/swordpbmaker.png?raw=true",
-    'なし': None
-}
-
 SHADOW_ONOFF = {
     'あり': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/shadowpbmaker.png?raw=true',
     'なし': None
