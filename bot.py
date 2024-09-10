@@ -36,11 +36,13 @@ ACCESSORIES_IMAGES = {
 
 ACCESSORIES_CHOICES = [
     app_commands.Choice(name='剣', value='剣'),
+    app_commands.Choice(name='爆弾', value='爆弾'),
     app_commands.Choice(name='盾', value='盾'),
     app_commands.Choice(name='銃', value='銃'),
     app_commands.Choice(name='ブーメラン', value='ブーメラン'),
     app_commands.Choice(name='バトン', value='バトン'),
     app_commands.Choice(name='Wiiリモコン', value='Wiiリモコン'),
+    app_commands.Choice(name='Joy-Con', value='Joy-Con'),
     app_commands.Choice(name='寿司', value='寿司'),
     app_commands.Choice(name='緑茶', value='緑茶'),
     app_commands.Choice(name='ボタン', value='ボタン'),
