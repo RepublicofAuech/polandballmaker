@@ -20,7 +20,9 @@ async def on_ready():
 ACCESSORIES_IMAGES = {
     '剣': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/swordpbmaker.png?raw=true',
     'ブーメラン': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/boomerangpbmaker.png?raw=true',
-    'サイリウム': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/lightstick.png?raw=true'
+    'サイリウム(左側のみ)': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/lightstick.png?raw=true',
+    'サイリウム(右側のみ)': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/lightstickred.png?raw=true',
+    'サイリウム(両側)': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/lightstickboth.png?raw=true',
 }
 
 ACCESSORIES_CHOICES = [
