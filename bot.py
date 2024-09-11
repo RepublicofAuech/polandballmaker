@@ -22,6 +22,7 @@ ACCESSORIES_IMAGES = {
     '盾': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/shield.png?raw=true',
     '銃': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/ak47.png?raw=true',
     '爆弾': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/bomb.png?raw=true',
+    'ソ連の鎌と桑': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/hammerandsickle.png?raw=true',
     'ハンマー': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/hammer.png?raw=true',
     'バケツ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/bucket.png?raw=true',
     'レンチ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/wrench.png?raw=true',
