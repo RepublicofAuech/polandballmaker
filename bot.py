@@ -17,54 +17,58 @@ async def on_ready():
     print(f'Logged in as {bot.user}!')
 
 # Dictionaries to map inputs to corresponding images
-ACCESSORIES_IMAGES = {
+WEAPON_ACCESSORIES = {
     '剣': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/swordpbmaker.png?raw=true',
     '盾': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/shield.png?raw=true',
     '銃': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/ak47.png?raw=true',
     '爆弾': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/bomb.png?raw=true',
     'ソ連の鎌と桑': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/hammerandsickle.png?raw=true',
-    'ハンマー': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/hammer.png?raw=true',
-    'バケツ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/bucket.png?raw=true',
-    'レンチ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/wrench.png?raw=true',
-    '白旗': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/whiteflag.png?raw=true',
     'ブーメラン': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/boomerangpbmaker.png?raw=true',
-    'バトン': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/baton.png?raw=true',
+}
+
+ELECTRONICS_ACCESSORIES = {
     'Wiiリモコン': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/wiiremote.png?raw=true',
     'Joy-Con(左のみ)': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/joycon.png?raw=true',
     'Joy-Con(右のみ)': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/joyconr.png?raw=true',
     'Joy-Con(両方)': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/joyconboth.png?raw=true',
     'iPhone': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/phone.png?raw=true',
+}
+
+BUILDING_ACCESSORIES = {
+    'ハンマー': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/hammer.png?raw=true',
+    'バケツ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/bucket.png?raw=true',
+    'レンチ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/wrench.png?raw=true',
+}
+
+FOOD_ACCESSORIES = {
     '寿司': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/sushi.png?raw=true',
     '緑茶': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/greentea.png?raw=true',
     'ボタン': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/redbutton.png?raw=true',
+}
+
+OTHER_ACCESSORIES = {
+    'タバコ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/cigarette.png?raw=true',
+    'バトン': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/baton.png?raw=true',
     'サイリウム(左側のみ)': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/lightstick.png?raw=true',
     'サイリウム(右側のみ)': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/lightstickred.png?raw=true',
     'サイリウム(両側)': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/lightstickboth.png?raw=true',
+    '白旗': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/whiteflag.png?raw=true',
 }
 
-ACCESSORIES_CHOICES = [
-    app_commands.Choice(name='剣', value='剣'),
-    app_commands.Choice(name='爆弾', value='爆弾'),
-    app_commands.Choice(name='盾', value='盾'),
-    app_commands.Choice(name='銃', value='銃'),
-    app_commands.Choice(name='ソ連の鎌と桑', value='ソ連の鎌と桑'),
-    app_commands.Choice(name='ハンマー', value='ハンマー'),
-    app_commands.Choice(name='バケツ', value='バケツ'),
-    app_commands.Choice(name='レンチ', value='レンチ'),
-    app_commands.Choice(name='白旗', value='白旗'),
-    app_commands.Choice(name='ブーメラン', value='ブーメラン'),
-    app_commands.Choice(name='バトン', value='バトン'),
-    app_commands.Choice(name='Wiiリモコン', value='Wiiリモコン'),
-    app_commands.Choice(name='Joy-Con(左のみ)', value='Joy-Con(左のみ)'),
-    app_commands.Choice(name='Joy-Con(右のみ)', value='Joy-Con(右のみ)'),
-    app_commands.Choice(name='Joy-Con(両方)', value='Joy-Con(両方)'),
-    app_commands.Choice(name='iPhone', value='iPhone'),
-    app_commands.Choice(name='寿司', value='寿司'),
-    app_commands.Choice(name='緑茶', value='緑茶'),
-    app_commands.Choice(name='ボタン', value='ボタン'),
-    app_commands.Choice(name='サイリウム(左側のみ)', value='サイリウム(左側のみ)'),
-    app_commands.Choice(name='サイリウム(右側のみ)', value='サイリウム(右側のみ)'),
-    app_commands.Choice(name='サイリウム(両側)', value='サイリウム(両側)'),
+ACCESSORIES_LIST = {
+    '武器など': WEAPON_ACCESSORIES,
+    '電子機器': ELECTRONICS_ACCESSORIES,
+    '食べ物': FOOD_ACCESSORIES,
+    '作業系': BUILDING_ACCESSORIES,
+    'その他': OTHER_ACCESSORIES
+}
+
+ACCESSORIES_CATEGORY = [
+    app_commands.Choice(name='武器など', value='武器など'),
+    app_commands.Choice(name='電子機器', value='電子機器'),
+    app_commands.Choice(name='食べ物', value='食べ物'),
+    app_commands.Choice(name='作業系', value='作業系'),
+    app_commands.Choice(name='その他', value='その他'),
 ]
 
 ENEUROPE_COUNTRY = {
@@ -844,6 +848,11 @@ async def get_country_choices(interaction: discord.Interaction, current: str):
     flags = CATEGORY_FLAGS.get(category, {})
     return [app_commands.Choice(name=name, value=name) for name in flags.keys() if current.lower() in name.lower()]
 
+async def get_accessories_category(interaction: discord.Interaction, current: str):
+    category = interaction.namespace.category
+    accessories = ACCESSORIES_LIST.get(category, {})
+    return [app_commands.Choice(name=name, value=name) for name in accessories.keys() if current.lower() in name.lower()]
+
 # Function to download an image from a URL
 
 
@@ -1075,15 +1084,25 @@ async def pb_maker(interaction: discord.Interaction,
 @bot.tree.command(name='accessories', description='ポーランドボールの画像を入れて飾りみたいなのをつけます')
 @app_commands.describe(
     image='ここにPBメーカーのボールの画像を入れてください',
-    name='つける飾りを選んでください'
+    category='飾りの種類を選んでください',
+    accessories='つける飾りを選んでください'
 )
-@app_commands.choices(name=ACCESSORIES_CHOICES)
-async def merge(interaction: discord.Interaction, image: discord.Attachment, name: app_commands.Choice[str]):
-    if name.value not in ACCESSORIES_IMAGES:
+@app_commands.choices(category=ACCESSORIES_CATEGORY)
+@app_commands.autocomplete(accessories=get_accessories_category)
+async def merge(interaction: discord.Interaction,
+                image: discord.Attachment,
+                category: app_commands.Choice[str],
+                accessories: str):
+    # Correctly access accessories from the ACCESSORIES_LIST
+    accessory_images = ACCESSORIES_LIST.get(category.value, {})
+    
+    # Check if the selected accessory exists in the category
+    if accessories not in accessory_images:
         await interaction.followup.send("選択された飾りを見つけることができませんでした", ephemeral=True)
         return
 
     await interaction.response.defer()
+    
     # Check if the uploaded file is an image
     if not image.content_type.startswith("image/"):
         await interaction.followup.send("画像ファイルが見つかりませんでした", ephemeral=True)
@@ -1094,7 +1113,7 @@ async def merge(interaction: discord.Interaction, image: discord.Attachment, nam
     uploaded_image = Image.open(io.BytesIO(image_data)).convert("RGBA")
 
     # Fetch the predefined image from the URL
-    predefined_image_url = ACCESSORIES_IMAGES[name.value]
+    predefined_image_url = accessory_images[accessories]
     response = requests.get(predefined_image_url)
     predefined_image = Image.open(io.BytesIO(response.content)).convert("RGBA")
 
