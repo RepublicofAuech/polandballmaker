@@ -47,6 +47,7 @@ ACCESSORIES_CHOICES = [
     app_commands.Choice(name='爆弾', value='爆弾'),
     app_commands.Choice(name='盾', value='盾'),
     app_commands.Choice(name='銃', value='銃'),
+    app_commands.Choice(name='ソ連の鎌と桑', value='ソ連の鎌と桑'),
     app_commands.Choice(name='ハンマー', value='ハンマー'),
     app_commands.Choice(name='バケツ', value='バケツ'),
     app_commands.Choice(name='レンチ', value='レンチ'),
