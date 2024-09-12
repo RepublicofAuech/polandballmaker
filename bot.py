@@ -22,6 +22,8 @@ WEAPON_ACCESSORIES = {
     '盾': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/shield.png?raw=true',
     '銃': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/ak47.png?raw=true',
     '爆弾': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/bomb.png?raw=true',
+    'ランチャー': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/blaster.png?raw=true',
+    '手裏剣': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/shuriken.png?raw=true',
     'ソ連の鎌と桑': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/hammerandsickle.png?raw=true',
     'ブーメラン': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/boomerangpbmaker.png?raw=true',
 }
