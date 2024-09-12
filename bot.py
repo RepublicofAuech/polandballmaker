@@ -732,6 +732,36 @@ POSITION_COMMANDS = {
     '左上': '目の位置は左上に設定されました。',
 }
 
+TOWN_TOHOKU = {
+    '枝幸町': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/esashiballpbmaker.png?raw=true',
+    '七ヶ浜町': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/shichigahamaballpbmaker.png?raw=true',
+}
+
+TOWN_KANTO = {
+    '三芳町': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/miyoshiballpbmaker.png?raw=true',
+    '鋸南町': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/kyonanballpbmaker.png?raw=true',
+}
+
+TOWN_CHUBU = {
+    '若狭町': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/wakasaballpbmaker.png?raw=true',
+    '飛島村': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/tobishimaballpbmaker.png?raw=true',
+}
+
+TOWN_KINKI = {
+    '精華町': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/seikaballpbmaker.png?raw=true',
+    '王寺町': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/oujiballpbmaker.png?raw=true',
+}
+
+TOWN_CHUSHI = {
+    '府中町': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/fuchuballpbmaker.png?raw=true',
+    '宇多津町': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/utazuballpbmaker.png?raw=true',
+}
+
+TOWN_KYUSHU = {
+    '菊陽町': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/kikuyoballpbmaker.png?raw=true',
+    '与那国町': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/yonaguniballpbmaker.png?raw=true',
+}
+
 SHADOW_ONOFF = {
     'あり': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/shadowpbmaker.png?raw=true',
     'なし': None
@@ -766,6 +796,12 @@ CATEGORY_FLAGS = {
     'その他の都市（近畿）': OTHER_CITY_KINKI,
     'その他の都市（中四国）': OTHER_CITY_CHUSHI,
     'その他の都市（九州）': OTHER_CITY_KYUSHU,
+    '町村部（北海道・東北）': TOWN_TOHOKU,
+    '町村部（関東）': TOWN_KANTO,
+    '町村部（中部）': TOWN_CHUBU,
+    '町村部（近畿）': TOWN_KINKI,
+    '町村部（中四国）': TOWN_CHUSHI,
+    '町村部（九州）': TOWN_KYUSHU,
     '昔あった国': OLDCOUNTRY,
     'その他': OTHERS,
     'なし': NONE
@@ -805,6 +841,12 @@ JAPAN_CHOICES = [
     app_commands.Choice(name='その他の都市（近畿）', value='その他の都市（近畿）'),
     app_commands.Choice(name='その他の都市（中四国）', value='その他の都市（中四国）'),
     app_commands.Choice(name='その他の都市（九州）', value='その他の都市（九州）'),
+    app_commands.Choice(name='町村部（北海道・東北）', value='町村部（北海道・東北）'),
+    app_commands.Choice(name='町村部（関東）', value='町村部（関東）'),
+    app_commands.Choice(name='町村部（中部）', value='町村部（中部）'),
+    app_commands.Choice(name='町村部（近畿）', value='町村部（近畿）'),
+    app_commands.Choice(name='町村部（中四国）', value='町村部（中四国）'),
+    app_commands.Choice(name='町村部（九州）', value='町村部（九州）'),
     app_commands.Choice(name='なし', value='なし')
 ]
 
