@@ -306,6 +306,7 @@ TOHTOCHU_PREF = {
     '栃木県': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/tochigiballpbmaker.png?raw=true',
     '群馬県': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/gunmaballpbmaker.png?raw=true',
     '千葉県': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/chibapbmaker.png?raw=true',
+    '千葉県(旧)': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/oldchibapbmaker.png?raw=true',
     '北海道': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/hokkaidopbmaker.png?raw=true',
     '茨城県': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/ibarakipbmaker.png?raw=true',
     '神奈川県': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/kanagawaballpbmaker.png?raw=true',
@@ -596,6 +597,7 @@ OTHER_CITY_KANTO = {
     '逗子市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/zushiballpbmaker.png?raw=true',
     '土浦市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/tsuchiuraballpbmaker.png?raw=true',
     '鎌倉市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/kamakuraballpbmaker.png?raw=true',
+    '和光市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/wakoballpbmaker.png?raw=true',
 }
 
 OTHER_CITY_CHUBU = {
