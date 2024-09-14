@@ -508,17 +508,8 @@ OLDCOUNTRY = {
     'ドイツ帝国': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/germanempireballpbmaker.png?raw=true',
 }
 
-OTHERS = {
-    'An Untitled Editor': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/aueballpbmaker.png?raw=true',
-    '鳥取県信者ボール': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/believertottoripbmaker.png?raw=true',
+COUNTRY_OTHERS = {
     '鳥取県信者共栄圏': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/tottorikyoueikenballpbmaker.png?raw=true',
-    'きんら': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/kinrapbmaker.png?raw=true',
-    'きんら(旧)': 'https://raw.githubusercontent.com/RepublicofAuech/polandballmaker/main/flags/kinrapbmaker2.png?raw=true',
-    'シンガポール(球状)': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/singaporeballpbmaker.png?raw=true',
-    'カザフスタン(球状)': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/circlekazakhballpbmaker.png?raw=true',
-    'らいる': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/rairuballpbmaker.png?raw=true',
-    'なめこch': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/namekoballpbmaker.png?raw=true',
-    '四国連邦': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/shikokurenpoballpbmaker.png?raw=true',
     'チャワストム共和国': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/cawastomballpbmaker.png?raw=true',
     'アウイック共和国': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/auechballpbmaker.png?raw=true',
     'フォノッサ共和国': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/fonossaballpbmaker.png?raw=true',
@@ -534,6 +525,22 @@ OTHERS = {
     'サウゼニア連邦': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/sauzeniaballpbmaker.png?raw=true',
     'サウゼニア連邦(陣営ver)': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/sauzeniapactballpbmaker.png?raw=true',
     '吹奏楽部のイメージ旗': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/brassbandballpbmaker.png?raw=true',
+}
+
+CIRCLE_PB = {
+    'シンガポール(球状)': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/singaporeballpbmaker.png?raw=true',
+    'カザフスタン(球状)': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/circlekazakhballpbmaker.png?raw=true',
+    'ネパール(球状)': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/circlenepalballpbmaker.png?raw=true',
+}
+
+CREATOR_FRIENDS = {
+    'An Untitled Editor': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/aueballpbmaker.png?raw=true',
+    '鳥取県信者ボール': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/believertottoripbmaker.png?raw=true',
+    'らいる': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/rairuballpbmaker.png?raw=true',
+    'なめこch': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/namekoballpbmaker.png?raw=true',
+    'きんら': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/kinrapbmaker.png?raw=true',
+    'きんら(旧)': 'https://raw.githubusercontent.com/RepublicofAuech/polandballmaker/main/flags/kinrapbmaker2.png?raw=true',
+    '四国連邦': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/shikokurenpoballpbmaker.png?raw=true',
 }
 
 SPECIAL_CITY = {
@@ -780,6 +787,8 @@ COLORS = {
     '黒': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/blackballpbmaker.png?raw=true',
 }
 
+
+
 SHADOW_ONOFF = {
     'あり': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/shadowpbmaker.png?raw=true',
     'なし': None
@@ -821,7 +830,9 @@ CATEGORY_FLAGS = {
     '町村部（中四国）': TOWN_CHUSHI,
     '町村部（九州）': TOWN_KYUSHU,
     '昔あった国': OLDCOUNTRY,
-    'その他': OTHERS,
+    '架空国家': COUNTRY_OTHERS,
+    'Bot作者・ネッ友など': CREATOR_FRIENDS,
+    '無理矢理ボールにしたやつ': CIRCLE_PB,
     '色': COLORS,
     'なし': NONE
 }
@@ -870,8 +881,10 @@ JAPAN_CHOICES = [
 ]
 
 OTHER_CHOICES = [
-    app_commands.Choice(name='その他', value='その他'),
+    app_commands.Choice(name='架空国家', value='架空国家'),
     app_commands.Choice(name='色', value='色'),
+    app_commands.Choice(name='Bot作者・ネッ友など', value='Bot作者・ネッ友など'),
+    app_commands.Choice(name='無理矢理ボールにしたやつ', value='無理矢理ボールにしたやつ'),
     app_commands.Choice(name='なし', value='なし')
 ]
 
