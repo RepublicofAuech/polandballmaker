@@ -766,6 +766,20 @@ TOWN_KYUSHU = {
     '与那国町': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/yonaguniballpbmaker.png?raw=true',
 }
 
+COLORS = {
+    '赤': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/redballpbmaker.png?raw=true',
+    '青': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/blueballpbmaker.png?raw=true',
+    '黄': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/yellowballpbmaker.png?raw=true',
+    '緑': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/greenballpbmaker.png?raw=true',
+    '黄緑': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/limeballpbmaker.png?raw=true',
+    'オレンジ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/orangeballpbmaker.png?raw=true',
+    '紫': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/purpleballpbmaker.png?raw=true',
+    'ピンク': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/pinkballpbmaker.png?raw=true',
+    '空色': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/cyanballpbmaker.png?raw=true',
+    '白': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/whiteballpbmaker.png?raw=true',
+    '黒': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/blackballpbmaker.png?raw=true',
+}
+
 SHADOW_ONOFF = {
     'あり': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/shadowpbmaker.png?raw=true',
     'なし': None
@@ -808,6 +822,7 @@ CATEGORY_FLAGS = {
     '町村部（九州）': TOWN_KYUSHU,
     '昔あった国': OLDCOUNTRY,
     'その他': OTHERS,
+    '色': COLORS,
     'なし': NONE
 }
 
@@ -856,6 +871,7 @@ JAPAN_CHOICES = [
 
 OTHER_CHOICES = [
     app_commands.Choice(name='その他', value='その他'),
+    app_commands.Choice(name='色', value='色'),
     app_commands.Choice(name='なし', value='なし')
 ]
 
