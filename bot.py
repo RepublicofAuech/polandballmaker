@@ -510,7 +510,7 @@ OLDCOUNTRY = {
 
 COUNTRY_OTHERS = {
     '鳥取県信者共栄圏': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/tottorikyoueikenballpbmaker.png?raw=true',
-    'ロシア・ツァーリ国': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/tsarballpbmaker.png?raw=true',
+    'Tsar': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/tsarballpbmaker.png?raw=true',
     'ヘルスト国': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/helstoballpbmaker.png?raw=true',
     'チャワストム共和国': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/cawastomballpbmaker.png?raw=true',
     'アウイック共和国': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/auechballpbmaker.png?raw=true',
