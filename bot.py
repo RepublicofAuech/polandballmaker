@@ -635,6 +635,7 @@ OTHER_CITY_NKANTO = {
     'かすみがうら市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/kasumigauraballpbmaker.png?raw=true',
     '桜川市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/sakuragawaballpbmaker.png?raw=true',
     '神栖市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/kamisuballpbmaker.png?raw=true',
+    '守谷市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/moriyaballpbmaker.png?raw=true',
 }
 
 OTHER_CITY_SKANTO = {
@@ -661,6 +662,8 @@ OTHER_CITY_SKANTO = {
     '習志野市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/narashinoballpbmaker.png?raw=true',
     '茂原市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/shigeharaballpbmaker.png?raw=true',
     '勝浦市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/katsuuraballpbmaker.png?raw=true',
+    '富津市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/tomizuballpbmaker.png?raw=true',
+    '白井市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/shiraiballpbmaker.png?raw=true',
 }
 
 OTHER_CITY_CHUBUTOK = {
