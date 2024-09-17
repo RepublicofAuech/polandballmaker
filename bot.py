@@ -51,6 +51,7 @@ FOOD_ACCESSORIES = {
 
 OTHER_ACCESSORIES = {
     'タバコ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/cigarette.png?raw=true',
+    '虫眼鏡': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/magneticglasses.png?raw=true',
     'バトン': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/baton.png?raw=true',
     'サイリウム(左側のみ)': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/lightstick.png?raw=true',
     'サイリウム(右側のみ)': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/lightstickred.png?raw=true',
