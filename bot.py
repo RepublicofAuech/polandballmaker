@@ -690,6 +690,8 @@ OTHER_CITY_CHUBUTOK = {
     '新城市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/shinshiroballpbmaker.png?raw=true',
     '常滑市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/tokonameballpbmaker.png?raw=true',
     '津島市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/tsushimaballpbmaker.png?raw=true',
+    '土岐市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/tokiballpbmaker.png?raw=true',
+    '伊豆市': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/izuballpbmaker.png?raw=true',
 }
 
 OTHER_CITY_CHUBUETC = {
