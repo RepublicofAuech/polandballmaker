@@ -24,6 +24,7 @@ WEAPON_ACCESSORIES = {
     '爆弾': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/bomb.png?raw=true',
     'ランチャー': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/blaster.png?raw=true',
     '手裏剣': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/shuriken.png?raw=true',
+    'ナイフ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/weaponknife.png?raw=true',
     'ソ連の鎌と桑': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/hammerandsickle.png?raw=true',
     'ブーメラン': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/boomerangpbmaker.png?raw=true',
 }
@@ -54,6 +55,8 @@ OTHER_ACCESSORIES = {
     'サイリウム(左側のみ)': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/lightstick.png?raw=true',
     'サイリウム(右側のみ)': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/lightstickred.png?raw=true',
     'サイリウム(両側)': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/lightstickboth.png?raw=true',
+    'スプーン': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/spoon.png?raw=true',
+    'フォーク': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/fork.png?raw=true',
     '白旗': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/accessories/whiteflag.png?raw=true',
 }
 
