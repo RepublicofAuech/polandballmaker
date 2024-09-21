@@ -866,6 +866,7 @@ EXPRESSION_IMAGES = {
     '右目ウインク': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/eyes/winkeyes2.png?raw=true',
     'じーっと見てる': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/eyes/staringeyes.png?raw=true',
     'ﾁｰﾝ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/eyes/deadeyes.png?raw=true',
+    '睨む': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/eyes/glaringeyes.png?raw=true',
     '細目': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/eyes/thineyes.png?raw=true',
     '退屈': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/eyes/boredeyes.png?raw=true',
     'イライラ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/eyes/frustratedeyes.png?raw=true',
@@ -1056,6 +1057,7 @@ EXPRESSION_CHOICES = [
     app_commands.Choice(name='じーっと見てる', value='じーっと見てる'),
     app_commands.Choice(name='ﾁｰﾝ', value='ﾁｰﾝ'),
     app_commands.Choice(name='イライラ', value='イライラ'),
+    app_commands.Choice(name='睨む', value='睨む'),
     app_commands.Choice(name='細目', value='細目'),
     app_commands.Choice(name='退屈', value='退屈'),
     app_commands.Choice(name='なし', value='なし')
