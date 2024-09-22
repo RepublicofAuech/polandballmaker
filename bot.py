@@ -1105,16 +1105,22 @@ def crop_to_square(image):
     right = (width + new_dimension) // 2
     bottom = (height + new_dimension) // 2
 
-    # Crop the image using a tuple for the bounding box
-    return image.crop((left, top, right, bottom))
+    # Crop the image to a square
+    cropped_image = image.crop((left, top, right, bottom))
+
+    # Resize the cropped image to 879x879
+    resized_image = cropped_image.resize((879, 879), Image.LANCZOS)
+
+    return resized_image
 
 def apply_clip_mask_with_outline(user_img, mask_img):
     # Ensure both images are in RGBA mode (with transparency)
     user_img = user_img.convert("RGBA")
     mask_img = mask_img.convert("L")  # Use only the alpha (grayscale) channel of the mask
 
-    # Resize the mask to match the size of the user's image
-    mask_img = mask_img.resize(user_img.size, Image.LANCZOS)
+    # Resize both the user's image and the mask to 879x879
+    user_img = user_img.resize((879, 879), Image.LANCZOS)
+    mask_img = mask_img.resize((879, 879), Image.LANCZOS)
 
     # Apply the mask to the user's image
     user_img.putalpha(mask_img)
