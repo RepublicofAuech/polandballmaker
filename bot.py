@@ -1448,83 +1448,54 @@ async def pbmaker_custom(interaction: discord.Interaction,
                          expression: app_commands.Choice[str],
                          position: app_commands.Choice[str],
                          shadow: app_commands.Choice[str]):
-    await interaction.response.defer()
-
-    # Fetch user's image
     try:
+        await interaction.response.defer()
+
+        # Fetch user's image
         image_url = image.url
         user_img = await fetch_image(image_url)
+
         if not user_img:
-            raise Exception("Failed to fetch user image.")
-    except Exception as e:
-        await interaction.followup.send(f"画像の取得に失敗しました。再試行してください: {e}", ephemeral=True)
-        return
+            await interaction.followup.send("画像の取得に失敗しました。再試行してください", ephemeral=True)
+            return
 
-    # Crop the user's image to a square
-    try:
+        # Crop the user's image to a square
         user_img = crop_to_square(user_img)
-    except Exception as e:
-        await interaction.followup.send(f"画像のクロップ中にエラーが発生しました: {e}", ephemeral=True)
-        return
 
-    # Fetch the outline mask image
-    try:
+        # Fetch the outline mask image
         outline_url = 'https://github.com/RepublicofAuech/polandballmaker/blob/main/custom/maskingpbmaker.png?raw=true'
         outline_img = await fetch_image(outline_url)
+
         if not outline_img:
-            raise Exception("Failed to fetch outline image.")
-    except Exception as e:
-        await interaction.followup.send(f"マスク画像の取得に失敗しました: {e}", ephemeral=True)
-        return
+            await interaction.followup.send("マスク画像の取得に失敗しました。再試行してください", ephemeral=True)
+            return
 
-    # Apply a clip mask using the outline image
-    try:
+        # Apply a clip mask using the outline image
         masked_img = apply_clip_mask_with_outline(user_img, outline_img)
-    except Exception as e:
-        await interaction.followup.send(f"マスク処理中にエラーが発生しました: {e}", ephemeral=True)
-        return
 
-    # Fetch the overlay image (expression or other image) from the URL
-    try:
+        # Fetch the overlay image (expression or other image) from the URL
         expression_url = EXPRESSION_IMAGES.get(expression.value, None)
         expression_img = await fetch_image(expression_url) if expression_url else None
-    except Exception as e:
-        await interaction.followup.send(f"表情画像の取得に失敗しました: {e}", ephemeral=True)
-        return
 
-    # Fetch the ball outline image
-    try:
         balloutline_url = 'https://github.com/RepublicofAuech/polandballmaker/blob/main/custom/outlinepbmaker.png?raw=true'
         balloutline_img = await fetch_image(balloutline_url)
-    except Exception as e:
-        await interaction.followup.send(f"ボール輪郭画像の取得に失敗しました: {e}", ephemeral=True)
-        return
 
-    # Fetch the shadow image
-    try:
         shadow_url = SHADOW_ONOFF.get(shadow.value)
         shadow_img = await fetch_image(shadow_url) if shadow_url else None
-    except Exception as e:
-        await interaction.followup.send(f"影画像の取得に失敗しました: {e}", ephemeral=True)
-        return
 
-    # Generate the combined image by merging the masked user image and the overlay
-    try:
+        # Generate the combined image by merging the masked user image and the overlay
         combined_img = merge_custom(shadow_img, masked_img, balloutline_img, expression_img, position.value)
-    except Exception as e:
-        await interaction.followup.send(f"画像の合成中にエラーが発生しました: {e}", ephemeral=True)
-        return
 
-    # Save the final image and send it back to the user
-    try:
+        # Save the final image and send it back to the user
         with io.BytesIO() as output:
             combined_img.save(output, format='PNG')
             output.seek(0)
             file = discord.File(output, filename='custompbmaker.png')
             await interaction.followup.send(file=file)
-    except Exception as e:
-        await interaction.followup.send(f"画像の送信中にエラーが発生しました: {e}", ephemeral=True)
 
+    except Exception as e:
+        logging.error(f"An error occurred: {e}")
+        await interaction.followup.send(f"コマンドを正常に実行できませんでした: {e}", ephemeral=True)
         
 load_dotenv()
 bot.run(os.getenv("TOKEN"))
