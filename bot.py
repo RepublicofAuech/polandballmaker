@@ -1120,7 +1120,55 @@ def apply_clip_mask_with_outline(user_img, mask_img):
     user_img.putalpha(mask_img)
     return user_img
 
-def merge_images(shadow_img, flag_img, balloutline_img, expression_img, position):
+def merge_images(shadow_img, flag_img, expression_img, position):
+    # Convert expression_img to RGBA if not already
+    if expression_img and expression_img.mode != 'RGBA':
+        expression_img = expression_img.convert('RGBA')
+    
+    # Resize the expression image to 100% of the flag's size
+    if expression_img:
+        expression_img = expression_img.resize((flag_img.width, flag_img.height), Image.LANCZOS)
+
+    # Define offset values for more exaggerated positions
+    offset_x, offset_y = 120, 120  # Adjust these values for more or less offset
+
+    # Define positions with more offset
+    positions = {
+        '真ん中': ((flag_img.width - (expression_img.width if expression_img else flag_img.width)) // 2, (flag_img.height - (expression_img.height if expression_img else flag_img.height)) // 2),
+        '上': ((flag_img.width - (expression_img.width if expression_img else flag_img.width)) // 2, -offset_y),
+        '下': ((flag_img.width - (expression_img.width if expression_img else flag_img.width)) // 2, flag_img.height - (expression_img.height if expression_img else flag_img.height) + offset_y),
+        '左': (-offset_x, (flag_img.height - (expression_img.height if expression_img else flag_img.height)) // 2),
+        '右': (flag_img.width - (expression_img.width if expression_img else flag_img.width) + offset_x, (flag_img.height - (expression_img.height if expression_img else flag_img.height)) // 2),
+        '右上': (flag_img.width - (expression_img.width if expression_img else flag_img.width) + offset_x, -offset_y),
+        '右下': (flag_img.width - (expression_img.width if expression_img else flag_img.width) + offset_x, flag_img.height - (expression_img.height if expression_img else flag_img.height) + offset_y),
+        '左下': (-offset_x, flag_img.height - (expression_img.height if expression_img else flag_img.height) + offset_y),
+        '左上': (-offset_x, -offset_y),
+    }
+
+    # Get the coordinates for the given position
+    x, y = positions.get(position, ((flag_img.width - (expression_img.width if expression_img else flag_img.width)) // 2, (flag_img.height - (expression_img.height if expression_img else flag_img.height)) // 2))
+
+    # Create a new image to paste layers onto
+    combined_img = Image.new('RGBA', (flag_img.width, flag_img.height), (0, 0, 0, 0))
+
+    # If shadow image exists, calculate its position with a downward offset
+    if shadow_img:
+        shadow_img = shadow_img.resize((flag_img.width, flag_img.height), Image.LANCZOS)
+        shadow_offset_y = 10  # Move the shadow 10 pixels down; adjust this value as needed
+        shadow_x = (flag_img.width - shadow_img.width) // 2  # Center the shadow horizontally
+        shadow_y = (flag_img.height - shadow_img.height) // 2 + shadow_offset_y  # Center vertically and move down
+        combined_img.paste(shadow_img, (shadow_x, shadow_y), shadow_img)
+
+    # Paste the flag image on top of the shadow
+    combined_img.paste(flag_img, (0, 0), flag_img)
+
+    # Merge the expression onto the flag image
+    if expression_img:
+        combined_img.paste(expression_img, (x, y), expression_img)
+
+    return combined_img
+
+def merge_custom(shadow_img, flag_img, balloutline_img, expression_img, position):
     # Convert expression_img to RGBA if not already
     if expression_img and expression_img.mode != 'RGBA':
         expression_img = expression_img.convert('RGBA')
@@ -1436,7 +1484,7 @@ async def pbmaker_custom(interaction: discord.Interaction,
 
     # Generate the combined image by merging the masked user image and the overlay
     try:
-        combined_img = merge_images(shadow_img, masked_img, balloutline_img, expression_img, position.value)
+        combined_img = merge_custom(shadow_img, masked_img, balloutline_img, expression_img, position.value)
     except Exception as e:
         await interaction.followup.send(f"画像の合成中にエラーが発生しました: {e}", ephemeral=True)
         return
