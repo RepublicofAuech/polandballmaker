@@ -1081,9 +1081,6 @@ async def get_accessories_category(interaction: discord.Interaction, current: st
     accessories = ACCESSORIES_LIST.get(category, {})
     return [app_commands.Choice(name=name, value=name) for name in accessories.keys() if current.lower() in name.lower()]
 
-# Function to download an image from a URL
-
-
 async def fetch_image(url):
     if not isinstance(url, str) or not url:  # Check if URL is a valid string
         print(f"Invalid URL provided: {url}")
@@ -1097,9 +1094,33 @@ async def fetch_image(url):
             else:
                 print(f"Error fetching image: HTTP {response.status}")
                 return None
+            
+def crop_to_square(image):
+    # Calculate the dimensions for cropping
+    width, height = image.size
+    new_dimension = min(width, height)
+    
+    left = (width - new_dimension) // 2
+    top = (height - new_dimension) // 2
+    right = (width + new_dimension) // 2
+    bottom = (height + new_dimension) // 2
 
-# Function to merge the flag and expression images with more offset for each predefined position
-def merge_images(shadow_img, flag_img, expression_img, position):
+    # Crop the image using a tuple for the bounding box
+    return image.crop((left, top, right, bottom))
+
+def apply_clip_mask_with_outline(user_img, mask_img):
+    # Ensure both images are in RGBA mode (with transparency)
+    user_img = user_img.convert("RGBA")
+    mask_img = mask_img.convert("L")  # Use only the alpha (grayscale) channel of the mask
+
+    # Resize the mask to match the size of the user's image
+    mask_img = mask_img.resize(user_img.size, Image.LANCZOS)
+
+    # Apply the mask to the user's image
+    user_img.putalpha(mask_img)
+    return user_img
+
+def merge_images(shadow_img, flag_img, balloutline_img, expression_img, position):
     # Convert expression_img to RGBA if not already
     if expression_img and expression_img.mode != 'RGBA':
         expression_img = expression_img.convert('RGBA')
@@ -1141,6 +1162,11 @@ def merge_images(shadow_img, flag_img, expression_img, position):
     # Paste the flag image on top of the shadow
     combined_img.paste(flag_img, (0, 0), flag_img)
 
+    # Merge the ball outline image
+    if balloutline_img:
+        balloutline_img = balloutline_img.resize((flag_img.width, flag_img.height), Image.LANCZOS)
+        combined_img.paste(balloutline_img, (0, 0), balloutline_img)
+
     # Merge the expression onto the flag image
     if expression_img:
         combined_img.paste(expression_img, (x, y), expression_img)
@@ -1148,7 +1174,6 @@ def merge_images(shadow_img, flag_img, expression_img, position):
     return combined_img
 
 # Command to create the Polandball image
-
 
 @bot.tree.command(name='pbmaker_japan', description='日本の都市などのポーランドボールを作成します')
 @app_commands.describe(
@@ -1366,6 +1391,62 @@ async def merge(interaction: discord.Interaction,
         merged_image.save(image_binary, 'PNG')
         image_binary.seek(0)
         await interaction.followup.send(file=discord.File(fp=image_binary, filename='accessoriespb.png'))
+
+@bot.tree.command(name="pbmaker_custom", description="貼られた画像をボールにします")
+@app_commands.describe(image="ここに柄にしたい画像を入れてください", expression="ボールの表情を選んでください", position="目の位置を選んでください", shadow="影の有無を選んでください")
+@app_commands.choices(expression=EXPRESSION_CHOICES, position=POSITION_CHOICES, shadow=SHADOW_CHOICES)
+async def pbmaker_custom(interaction: discord.Interaction,
+                         image: discord.Attachment,
+                         expression: app_commands.Choice[str],
+                         position: app_commands.Choice[str],
+                         shadow: app_commands.Choice[str]):
+    await interaction.response.defer()
+
+    # Fetch user's image
+    image_url = image.url
+    user_img = await fetch_image(image_url)
+    
+    if not user_img:
+        await interaction.followup.send("画像の取得に失敗しました。再試行してください", ephemeral=True)
+        return
+
+    # Crop the user's image to a square
+    user_img = crop_to_square(user_img)
+
+    # Fetch the outline mask image
+    outline_url = 'https://github.com/RepublicofAuech/polandballmaker/blob/main/custom/maskingpbmaker.png?raw=true'
+    outline_img = await fetch_image(outline_url)
+    
+    if not outline_img:
+        await interaction.followup.send("マスク画像の取得に失敗しました。再試行してください", ephemeral=True)
+        return
+
+    # Apply a clip mask using the outline image
+    masked_img = apply_clip_mask_with_outline(user_img, outline_img)
+
+    # Fetch the overlay image (expression or other image) from the URL
+    expression_url = EXPRESSION_IMAGES.get(expression.value, None)
+    expression_img = await fetch_image(expression_url) if expression_url else None
+
+    balloutline_url = 'https://github.com/RepublicofAuech/polandballmaker/blob/main/custom/outlinepbmaker.png?raw=true'
+    balloutline_img = await fetch_image(balloutline_url)
+
+    shadow_url = SHADOW_ONOFF.get(shadow.value)
+    shadow_img = await fetch_image(shadow_url) if shadow_url else None
+
+    # Generate the combined image by merging the masked user image and the overlay
+    try:
+        combined_img = merge_images(shadow_img, masked_img, balloutline_img, expression_img, position.value)
+    except Exception as e:
+        await interaction.followup.send(f"画像の合成中にエラーが発生しました: {e}", ephemeral=True)
+        return
+
+    # Save the final image and send it back to the user
+    with io.BytesIO() as output:
+        combined_img.save(output, format='PNG')
+        output.seek(0)
+        file = discord.File(output, filename='custompbmaker.png')
+        await interaction.followup.send(file=file)
         
 load_dotenv()
 bot.run(os.getenv("TOKEN"))
