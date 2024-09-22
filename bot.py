@@ -1382,64 +1382,6 @@ async def pb_maker(interaction: discord.Interaction,
         file = discord.File(output, filename='polandball.png')
         await interaction.followup.send(file=file)
 
-@bot.tree.command(name='accessories', description='ポーランドボールの画像を入れて飾りみたいなのをつけます')
-@app_commands.describe(
-    image='ここにPBメーカーのボールの画像を入れてください',
-    category='飾りの種類を選んでください',
-    accessories='つける飾りを選んでください'
-)
-@app_commands.choices(category=ACCESSORIES_CATEGORY)
-@app_commands.autocomplete(accessories=get_accessories_category)
-async def merge(interaction: discord.Interaction,
-                image: discord.Attachment,
-                category: app_commands.Choice[str],
-                accessories: str):
-    # Correctly access accessories from the ACCESSORIES_LIST
-    accessory_images = ACCESSORIES_LIST.get(category.value, {})
-    
-    # Check if the selected accessory exists in the category
-    if accessories not in accessory_images:
-        await interaction.followup.send("選択された飾りを見つけることができませんでした", ephemeral=True)
-        return
-
-    await interaction.response.defer()
-    
-    # Check if the uploaded file is an image
-    if not image.content_type.startswith("image/"):
-        await interaction.followup.send("画像ファイルが見つかりませんでした", ephemeral=True)
-        return
-
-    # Fetch the uploaded image from Discord
-    image_data = await image.read()
-    uploaded_image = Image.open(io.BytesIO(image_data)).convert("RGBA")
-
-    # Fetch the predefined image from the URL
-    predefined_image_url = accessory_images[accessories]
-    response = requests.get(predefined_image_url)
-    predefined_image = Image.open(io.BytesIO(response.content)).convert("RGBA")
-
-    # Resize the predefined image to fit on top of the uploaded image (adjust as needed)
-    predefined_image = predefined_image.resize((uploaded_image.width, uploaded_image.height), Image.LANCZOS)
-
-    Y_OFFSET = 50  # Example: move 50 pixels down
-    x_offset = 0
-    y_offset = Y_OFFSET
-
-    # Create a blank canvas with the same size as the uploaded image
-    merged_image = Image.new("RGBA", uploaded_image.size)
-    
-    # Paste the uploaded image onto the canvas
-    merged_image.paste(uploaded_image, (0, 0))
-    
-    # Paste the predefined image with the specified offset
-    merged_image.paste(predefined_image, (x_offset, y_offset), predefined_image)
-
-    # Save the merged image to a bytes buffer
-    with io.BytesIO() as image_binary:
-        merged_image.save(image_binary, 'PNG')
-        image_binary.seek(0)
-        await interaction.followup.send(file=discord.File(fp=image_binary, filename='accessoriespb.png'))
-
 @bot.tree.command(name="pbmaker_custom", description="貼られた画像をボールにします")
 @app_commands.describe(image="ここに柄にしたい画像を入れてください", expression="ボールの表情を選んでください", position="目の位置を選んでください", shadow="影の有無を選んでください")
 @app_commands.choices(expression=EXPRESSION_CHOICES, position=POSITION_CHOICES, shadow=SHADOW_CHOICES)
@@ -1451,36 +1393,62 @@ async def pbmaker_custom(interaction: discord.Interaction,
     await interaction.response.defer()
 
     # Fetch user's image
-    image_url = image.url
-    user_img = await fetch_image(image_url)
-    
-    if not user_img:
-        await interaction.followup.send("画像の取得に失敗しました。再試行してください", ephemeral=True)
+    try:
+        image_url = image.url
+        user_img = await fetch_image(image_url)
+        if not user_img:
+            raise Exception("Failed to fetch user image.")
+    except Exception as e:
+        await interaction.followup.send(f"画像の取得に失敗しました。再試行してください: {e}", ephemeral=True)
         return
 
     # Crop the user's image to a square
-    user_img = crop_to_square(user_img)
+    try:
+        user_img = crop_to_square(user_img)
+    except Exception as e:
+        await interaction.followup.send(f"画像のクロップ中にエラーが発生しました: {e}", ephemeral=True)
+        return
 
     # Fetch the outline mask image
-    outline_url = 'https://github.com/RepublicofAuech/polandballmaker/blob/main/custom/maskingpbmaker.png?raw=true'
-    outline_img = await fetch_image(outline_url)
-    
-    if not outline_img:
-        await interaction.followup.send("マスク画像の取得に失敗しました。再試行してください", ephemeral=True)
+    try:
+        outline_url = 'https://github.com/RepublicofAuech/polandballmaker/blob/main/custom/maskingpbmaker.png?raw=true'
+        outline_img = await fetch_image(outline_url)
+        if not outline_img:
+            raise Exception("Failed to fetch outline image.")
+    except Exception as e:
+        await interaction.followup.send(f"マスク画像の取得に失敗しました: {e}", ephemeral=True)
         return
 
     # Apply a clip mask using the outline image
-    masked_img = apply_clip_mask_with_outline(user_img, outline_img)
+    try:
+        masked_img = apply_clip_mask_with_outline(user_img, outline_img)
+    except Exception as e:
+        await interaction.followup.send(f"マスク処理中にエラーが発生しました: {e}", ephemeral=True)
+        return
 
     # Fetch the overlay image (expression or other image) from the URL
-    expression_url = EXPRESSION_IMAGES.get(expression.value, None)
-    expression_img = await fetch_image(expression_url) if expression_url else None
+    try:
+        expression_url = EXPRESSION_IMAGES.get(expression.value, None)
+        expression_img = await fetch_image(expression_url) if expression_url else None
+    except Exception as e:
+        await interaction.followup.send(f"表情画像の取得に失敗しました: {e}", ephemeral=True)
+        return
 
-    balloutline_url = 'https://github.com/RepublicofAuech/polandballmaker/blob/main/custom/outlinepbmaker.png?raw=true'
-    balloutline_img = await fetch_image(balloutline_url)
+    # Fetch the ball outline image
+    try:
+        balloutline_url = 'https://github.com/RepublicofAuech/polandballmaker/blob/main/custom/outlinepbmaker.png?raw=true'
+        balloutline_img = await fetch_image(balloutline_url)
+    except Exception as e:
+        await interaction.followup.send(f"ボール輪郭画像の取得に失敗しました: {e}", ephemeral=True)
+        return
 
-    shadow_url = SHADOW_ONOFF.get(shadow.value)
-    shadow_img = await fetch_image(shadow_url) if shadow_url else None
+    # Fetch the shadow image
+    try:
+        shadow_url = SHADOW_ONOFF.get(shadow.value)
+        shadow_img = await fetch_image(shadow_url) if shadow_url else None
+    except Exception as e:
+        await interaction.followup.send(f"影画像の取得に失敗しました: {e}", ephemeral=True)
+        return
 
     # Generate the combined image by merging the masked user image and the overlay
     try:
@@ -1490,11 +1458,15 @@ async def pbmaker_custom(interaction: discord.Interaction,
         return
 
     # Save the final image and send it back to the user
-    with io.BytesIO() as output:
-        combined_img.save(output, format='PNG')
-        output.seek(0)
-        file = discord.File(output, filename='custompbmaker.png')
-        await interaction.followup.send(file=file)
+    try:
+        with io.BytesIO() as output:
+            combined_img.save(output, format='PNG')
+            output.seek(0)
+            file = discord.File(output, filename='custompbmaker.png')
+            await interaction.followup.send(file=file)
+    except Exception as e:
+        await interaction.followup.send(f"画像の送信中にエラーが発生しました: {e}", ephemeral=True)
+
         
 load_dotenv()
 bot.run(os.getenv("TOKEN"))
