@@ -1382,6 +1382,64 @@ async def pb_maker(interaction: discord.Interaction,
         file = discord.File(output, filename='polandball.png')
         await interaction.followup.send(file=file)
 
+@bot.tree.command(name='accessories', description='ポーランドボールの画像を入れて飾りみたいなのをつけます')
+@app_commands.describe(
+    image='ここにPBメーカーのボールの画像を入れてください',
+    category='飾りの種類を選んでください',
+    accessories='つける飾りを選んでください'
+)
+@app_commands.choices(category=ACCESSORIES_CATEGORY)
+@app_commands.autocomplete(accessories=get_accessories_category)
+async def merge(interaction: discord.Interaction,
+                image: discord.Attachment,
+                category: app_commands.Choice[str],
+                accessories: str):
+    # Correctly access accessories from the ACCESSORIES_LIST
+    accessory_images = ACCESSORIES_LIST.get(category.value, {})
+    
+    # Check if the selected accessory exists in the category
+    if accessories not in accessory_images:
+        await interaction.followup.send("選択された飾りを見つけることができませんでした", ephemeral=True)
+        return
+
+    await interaction.response.defer()
+    
+    # Check if the uploaded file is an image
+    if not image.content_type.startswith("image/"):
+        await interaction.followup.send("画像ファイルが見つかりませんでした", ephemeral=True)
+        return
+
+    # Fetch the uploaded image from Discord
+    image_data = await image.read()
+    uploaded_image = Image.open(io.BytesIO(image_data)).convert("RGBA")
+
+    # Fetch the predefined image from the URL
+    predefined_image_url = accessory_images[accessories]
+    response = requests.get(predefined_image_url)
+    predefined_image = Image.open(io.BytesIO(response.content)).convert("RGBA")
+
+    # Resize the predefined image to fit on top of the uploaded image (adjust as needed)
+    predefined_image = predefined_image.resize((uploaded_image.width, uploaded_image.height), Image.LANCZOS)
+
+    Y_OFFSET = 50  # Example: move 50 pixels down
+    x_offset = 0
+    y_offset = Y_OFFSET
+
+    # Create a blank canvas with the same size as the uploaded image
+    merged_image = Image.new("RGBA", uploaded_image.size)
+    
+    # Paste the uploaded image onto the canvas
+    merged_image.paste(uploaded_image, (0, 0))
+    
+    # Paste the predefined image with the specified offset
+    merged_image.paste(predefined_image, (x_offset, y_offset), predefined_image)
+
+    # Save the merged image to a bytes buffer
+    with io.BytesIO() as image_binary:
+        merged_image.save(image_binary, 'PNG')
+        image_binary.seek(0)
+        await interaction.followup.send(file=discord.File(fp=image_binary, filename='accessoriespb.png'))
+
 @bot.tree.command(name="pbmaker_custom", description="貼られた画像をボールにします")
 @app_commands.describe(image="ここに柄にしたい画像を入れてください", expression="ボールの表情を選んでください", position="目の位置を選んでください", shadow="影の有無を選んでください")
 @app_commands.choices(expression=EXPRESSION_CHOICES, position=POSITION_CHOICES, shadow=SHADOW_CHOICES)
