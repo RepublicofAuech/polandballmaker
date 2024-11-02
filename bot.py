@@ -106,6 +106,7 @@ ENEUROPE_COUNTRY = {
 }
 WSEUROPE_COUNTRY = {
     'フランス': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/franceballpbmaker.png?raw=true',
+    'フランス(旧)': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/2020franceballpbmaker.png?raw=true',
     'ドイツ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/germanyballpbmaker.png?raw=true',
     'イタリア': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/italyballpbmaker.png?raw=true',
     'バチカン市国': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/vaticanballpbmaker.png?raw=true',
@@ -497,20 +498,44 @@ TOKYO23WARDS = {
     '江戸川区': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/edogawaballpbmaker.png?raw=true'
 }
 
-OLDCOUNTRY = {
+OLDCOUNTRY_ASIA = {
     'ソ連': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/ussrballpbmaker.png?raw=true',
+    'ロシア連邦（ソ連崩壊後）': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/oldrussiaballpbmaker.png?raw=true',
+    '大日本帝国': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/japaneseempireballpbmaker.png?raw=true',
+    'モンゴル帝国': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/mongolempireballpbmaker.png?raw=true',
+    '大韓帝国': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/koreanempireballpbmaker.png?raw=true',
+    '南ベトナム': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/southvietnamballpbmaker.png?raw=true',
+    '清': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/qingballpbmaker.png?raw=true',
+    '満州国': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/manchuriaballpbmaker.png?raw=true',
+    'イギリス領インド帝国': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/britishrajballpbmaker.png?raw=true',
+    '朝鮮人民共和国': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/qingballpbmaker.png?raw=true',
+    '中華民国': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/republicofchinaballpbmaker.png?raw=true',
+    'ベトコン': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/vietcongballpbmaker.png?raw=true',
+}
+
+OLDCOUNTRY_EUROPE = {
+    '大英帝国': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/britishempireballpbmaker.png?raw=true',
+    'ソ連': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/ussrballpbmaker.png?raw=true',
+    'ロシア連邦（ソ連崩壊後）': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/oldrussiaballpbmaker.png?raw=true',
     'スペイン帝国': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/spanishempireballpbmaker.png?raw=true',
     'ナ〇スドイツ': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/germanreichballpbmaker.png?raw=true',
     'ローマ帝国': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/romanempireballpbmaker.png?raw=true',
     'オスマン帝国': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/ottomanempireballpbmaker.png?raw=true',
-    '大日本帝国': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/japaneseempireballpbmaker.png?raw=true',
-    'モンゴル帝国': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/mongolempireballpbmaker.png?raw=true',
-    '大韓帝国': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/koreanempireballpbmaker.png?raw=true',
     'ロシア帝国': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/russianempireballpbmaker.png?raw=true',
-    '南ベトナム': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/southvietnamballpbmaker.png?raw=true',
-    '清': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/qingballpbmaker.png?raw=true',
-    '満州国': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/manchuriaballpbmaker.png?raw=true',
     'ドイツ帝国': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/germanempireballpbmaker.png?raw=true',
+    'ヴィシー・フランス': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/vichyfranceballpbmaker.png?raw=true',
+    '自由フランス': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/freefranceballpbmaker.png?raw=true',
+    'ポルトガル海上帝国': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/portugueseempireballpbmaker.png?raw=true',
+    'イタリア王国': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/kingdomofitalyballpbmaker.png?raw=true',
+    'ユーゴスラビア': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/yugoslaviaballpbmaker.png?raw=true',
+    'スウェーデン＝ノルウェー連合王国': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/swedennorwayballpbmaker.png?raw=true'
+}
+
+OLDCOUNTRY_OTHERS = {
+    'アメリカ合衆国（独立時）': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/bettyrossballpbmaker.png?raw=true',
+    'ブラジル帝国': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/brazilianempireballpbmaker.png?raw=true',
+    'コンゴ自由国': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/congofreeballpbmaker.png?raw=true',
+    '南アフリカ連邦': 'https://github.com/RepublicofAuech/polandballmaker/blob/main/flags/oldsouthafricaballpbmaker.png?raw=true',
 }
 
 COUNTRY_OTHERS = {
@@ -999,7 +1024,9 @@ CATEGORY_FLAGS = {
     '町村部（近畿）': TOWN_KINKI,
     '町村部（中四国）': TOWN_CHUSHI,
     '町村部（九州）': TOWN_KYUSHU,
-    '昔あった国': OLDCOUNTRY,
+    '昔あった国、国旗（アジア）': OLDCOUNTRY_ASIA,
+    '昔あった国、国旗（ヨーロッパ）': OLDCOUNTRY_EUROPE,
+    '昔あった国、国旗（その他）': OLDCOUNTRY_OTHERS,
     '架空国家': COUNTRY_OTHERS,
     'Bot作者・ネッ友など': CREATOR_FRIENDS,
     '無理矢理ボールにしたやつ': CIRCLE_PB,
@@ -1022,7 +1049,9 @@ WORLD_CHOICES = [
     app_commands.Choice(name='オセアニアの国々', value='オセアニアの国々'),
     app_commands.Choice(name='海外領土・自治領、未承認国家', value='海外領土・自治領、未承認国家'),
     app_commands.Choice(name='組織', value='組織'),
-    app_commands.Choice(name='昔あった国', value='昔あった国'),
+    app_commands.Choice(name='昔あった国、国旗（アジア）', value='昔あった国、国旗（アジア）'),
+    app_commands.Choice(name='昔あった国、国旗（ヨーロッパ）', value='昔あった国、国旗（ヨーロッパ）'),
+    app_commands.Choice(name='昔あった国、国旗（その他）', value='昔あった国、国旗（その他）'),
     app_commands.Choice(name='世界都市', value='世界都市'),
     app_commands.Choice(name='なし', value='なし')
 ]
