@@ -7,6 +7,8 @@ import os
 import requests
 from PIL import Image
 from dotenv import load_dotenv
+from flask import Flask, request
+import threading
 
 intents = discord.Intents.all()
 bot = commands.Bot(command_prefix='/', intents=intents)
@@ -1625,5 +1627,24 @@ async def pbmaker_custom(interaction: discord.Interaction,
         logging.error(f"An error occurred: {e}")
         await interaction.followup.send(f"コマンドを正常に実行できませんでした: {e}", ephemeral=True)
         
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return "The bot's web server is running!"
+
+@app.route('/webhook', methods=['POST'])
+def webhook():
+    data = request.json
+    print(f"Received webhook data: {data}")
+    return "Webhook received!", 200
+
+def run_flask():
+    app.run(host="0.0.0.0", port=5000)
+
+# Run Flask in a separate thread
+flask_thread = threading.Thread(target=run_flask)
+flask_thread.start()
+
 load_dotenv()
 bot.run(os.getenv("TOKEN"))
